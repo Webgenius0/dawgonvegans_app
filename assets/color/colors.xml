@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+
+    <!-- For this app-->
+ <color name="cffffff">#FFFFFFFF</color>
+ <color name="c8F9098f">#FF8F9098</color>
+ <color name="c934830">#FF934830</color>
+ <color name="cBD9B16">#FFBD9B16</color>
+ <color name="c28A745">#FF28A745</color>
+ <color name="c060644">#FF060644</color>
+ <color name="c5A5A5E">#FF5A5A5E</color>
+ <color name="cFFFFFF">#FFFFFFFF</color>
+ <color name="cDEDEE1">#FFEDEE1</color>
+ <color name="c000000">#FF000000</color>
+ <color name="c0D0140">#FF0D0140</color>
+ <color name="c514A6B">#FF514A6B</color>
+ <color name="c5A5A5E">#FF5A5A5E</color>
+ <color name="c1C1C1E">#FF1C1C1E</color>
+ <color name="cB9BCC4">#FFB9BCC4</color>
+ <color name="c4B5368">#FF4B5368</color>
+ <color name="cB9BCC4">#FFB9BCC4</color>
+ <color name="cB9BCC4">#FFB9BCC4</color>
+ <color name="c1C1C1E">#FF1C1C1E</color>
+ <color name="c524B6B">#FF524B6B</color>
+ <color name="c130160">#FF130160</color>
+ <color name="c6E678C">#FF6E678C</color>
+ <color name="c333334">#FF333334</color>
+ <color name="c150B3D">#FF150B3D</color>
+ <color name="cF6F7FA">#FFF6F7FA</color>
+ <color name="c150B3D">#FF150B3D</color>
+ <color name="cFDFDFD">#FFFDFDFD</color>
+ <color name="cFBFBFD">#FFFBFBFD</color>
+ <color name="cA9A5B8">#FFA9A5B8</color>
+ <color name="c88898A">#FF88898A</color>
+ <color name="cF3F3F3">#FFF3F3F3</color>
+ <color name="c242760">#FF242760</color>
+ <color name="c24265F">#FF24265F</color>
+ <color name="cCAC4C4">#FFCAC4C4</color>
+ <color name="c534C4C">#FF534C4C</color>
+ <color name="c99ABC6">#FF99ABC6</color>
+ <color name="cE7E6E6">#FFE7E6E6</color>
+ <color name="c6B6B6B">#FF6B6B6B</color>
+ <color name="c99AAC5">#FF99AAC5</color>
+ <color name="cE6E6E7">#FFE6E6E7</color>
+ <color name="cF4F4F7">#FFF4F4F7</color>
+ <color name="c544C4C">#FF544C4C</color>
+ <color name="cF1F1F2">#FFF1F1F2</color>
+ <color name="c94969D">#FF94969D</color>
+ <color name="cA7A7A7">#FFA7A7A7</color>
+ <color name="c0C0C26">#FF0C0C26</color>
+ <color name="c2B2B60">#FF2B2B60</color>
+ <color name="c959090">#FF959090</color>
+ <color name="cADADAD">#FFADADAD</color>
+ <color name="cB3B3B3">#FFB3B3B3</color>
+ <color name="cE0E0E0">#FFE0E0E0</color>
+ <color name="c7F7F7F">#FF7F7F7F</color>
+ <color name="cAFB0B5">#FFAFB0B5</color>
+ <color name="cFAFAFD">#FFFAFAFD</color>
+ <color name="c514A6B">#FF514A6B</color>
+ <color name="c9A9A9A">#FF9A9A9A</color>
+ <color name="cCBC4C4">#FFCBC4C4</color>
+ <color name="cB6B6B6">#FFB6B6B6</color>
+ <color name="c040484">#FF040484</color>
+ <color name="cC8C8C8">#FFC8C8C8</color>
+ <color name="c797C7B">#FF797C7B</color>
+ <color name="cF3F6F6">#FFF3F6F6</color>
+ <color name="c000D07">#FF000D07</color>
+ <color name="cF2F7FB">#FFF2F7FB</color>
+ <color name="c969595">#FFF969595</color>
+ <color name="cC1C1D0">#FFC1C1D0</color>
+ <color name="c646464">#FF646464</color>
+ <color name="cF1C400">#FFF1C400</color>
+ <color name="c101820">#FF101820</color>
+ <color name="c8F9098">#FF8F9098</color>
+ <color name="cB4B6B4">#FFB4B6B4</color>
+ <color name="cF6F6F6">#FFF6F6F6</color>
+ <color name="cDC3545">#FFDC3545</color>
+
+
+
+
+   <!-- Initial Colors Start -->
+    <color name="scaffoldColor">#FF071112</color>
+    <color name="scaffoldBackgroundColor">#FFF6F6F6</color>
+    <color name="allPrimaryColor">#FF107631</color>
+    <color name="secondaryColor">#FFFFB75A</color>
+    <color name="primaruDarki">#FF02BF65</color>
+    <color name="gradiant2">#FF955EF9</color>
+    <color name="disableColour">#FFE0EDFF</color>
+    <color name="boxShadow">#FF0D6BF8</color>
+    <color name="c026cb7">#FF026cb7</color>
+    <color name="c777575">#FF777575</color>
+    <color name="cFFFFFF">#FFFFFFFF</color>
+    <color name="cffffff">#FFffffff</color>
+    <color name="c000000">#FF000000</color>
+    <color name="cC4C4C4">#FFC4C4C4</color>
+    <color name="c6b7280">#FF6b7280</color>
+    <color name="c38686A">#FF38686A</color>
+    <color name="ce7e5df">#FFe7e5df</color>
+    <color name="c919293">#FF919293</color>
+    <color name="cEBEBEB">#FFEBEBEB</color>
+    <color name="c9B9B9B">#FF9B9B9B</color>
+    <color name="cEDBB43">#FFEDBB43</color>
+    <color name="cF4F4F4">#FFF4F4F4</color>
+    <color name="c394456">#FF394456</color>
+    <color name="cE6E8ED">#FFE6E8ED</color>
+    <color name="c252c32">#FF252c32</color>
+    <color name="cB0BABF">#FFB0BABF</color>
+    <color name="c292E34">#FF292E34</color>
+    <color name="c54585C">#FF54585C</color>
+    <color name="c02BF65">#FF02BF65</color>
+    <color name="c012d4d">#FF012d4d</color>
+    <color name="c86d72f">#FF86d72f</color>
+    <color name="cF0F0F0">#FFF0F0F0</color>
+    <!-- Initial Colors End -->
+
+///Initial Colors Start
+<color name="scaffoldColor">#FFfbfbfb</color>
+<color name="allPrimaryColor">#FF107631</color>
+<color name="secondaryColor">#FFFFB75A</color>
+<color name="primaruDarki">#FF02BF65</color>
+<color name="gradiant2">#FF955EF9</color>
+<color name="disableColour">#FFE0EDFF</color>
+<color name="boxShadow">#FF0D6BF8</color>
+<color name="c026cb7">#FF026cb7</color>
+<color name="cFFFFFF">#FFFFFFFF</color>
+<color name="cffffff">#FFffffff</color>
+<color name="c000000">#FF000000</color>
+<color name="cC4C4C4">#FFC4C4C4</color>
+<color name="c6b7280">#FF6b7280</color>
+<color name="c38686A">#FF38686A</color>
+<color name="ce7e5df">#FFe7e5df</color>
+<color name="c919293">#FF919293</color>
+<color name="cEBEBEB">#FFEBEBEB</color>
+<color name="c9B9B9B">#FF9B9B9B</color>
+<color name="cEDBB43">#FFEDBB43</color>
+<color name="cF4F4F4">#FFF4F4F4</color>
+<color name="c394456">#FF394456</color>
+<color name="cE6E8ED">#FFE6E8ED</color>
+<color name="c252c32">#FF252c32</color>
+<color name="cB0BABF">#FFB0BABF</color>
+<color name="c292E34">#FF292E34</color>
+<color name="c54585C">#FF54585C</color>
+<color name="c02BF65">#FF02BF65</color>
+<color name="c012d4d">#FF012d4d</color>
+<color name="c86d72f">#FF86d72f</color>
+<color name="cF0F0F0">#FFF0F0F0</color>
+<!-- <color name="cFFA500">#FFFFA500</color> -->
+
+
+<color name="cFFA500">#FFA500</color>
+<color name="cBCF2C9">#BCF2C9</color>
+<color name="c4CAF50">#4CAF50</color>
+<color name="cFF0000">#FF0000</color>
+<color name="c808080">#808080</color>
+<color name="cF2F2F2">#F2F2F2</color>
+<color name="ccbbb0c">#FFcbbb0c</color>
+///Initial Colors Ends
+
+
+
+///Instat App Colors Start
+
+
+<!-- <color name="c">#FF</color> -->
+<color name="c201d1d">#FF201d1d</color>
+<color name="cbdbdbd">#FFbdbdbd</color>
+<color name="c201D1D">#FF201D1D</color>
+<color name="c344054">#FF344054</color>
+<color name="c504A4A">#FF504A4A</color>
+<color name="c8A8A8A">#FF8A8A8A</color>
+<color name="c18B155">#FF18B155</color>
+<color name="cF2F2F2">#FFF2F2F2</color>
+<color name="cEA4335">#FFEA4335</color>
+<color name="cFF4F42">#FFFF4F42</color>
+<color name="c818181">#FF818181</color>
+<color name="cC8CACC">#FFC8CACC</color>
+<color name="c5E5F60">#FF5E5F60</color>
+<color name="c363333">#FF363333</color>
+<color name="cfbfbfb">#FFfbfbfb</color>
+<color name="cf8bb04">#FFf8bb04</color>
+<color name="cf8bb04">#FFf8bb04</color>
+<color name="cbcf2c9">#FFbcf2c9</color>
+<color name="cfdfdfd">#FFfdfdfd</color>
+<color name="cf8f9fa">#FFf8f9fa</color>
+<color name="cf5f5f5">#FFf5f5f5</color>
+<color name="cFF4E41">#FFFF4E41</color>
+
+
+<color name="c5B5A5A">#FF5B5A5A</color>
+<color name="cF8F9FA">#FFF8F9FA</color>
+<color name="cBCBCBC">#FFBCBCBC</color>
+<color name="c667084">#FF667084</color>
+<color name="cF2F2F2">#FFF2F2F2</color>
+<color name="cBDBDBD">#FFBDBDBD</color>
+<color name="cFBFBFB">#FFFBFBFB</color>
+<color name="cF9F9F9">#FFF9F9F9</color>
+<color name="cE9EBEC">#FFE9EBEC</color>
+<color name="cC7C9CC">#FFC7C9CC</color>
+<color name="c34C759">#FF34C759</color>
+<color name="c787880">#FF787880</color>
+<color name="c8A8A8A">#FF8A8A8A</color>
+
+<color name="c606170">#FF606170</color>
+<color name="ce9ebed">#FFe9ebed</color>
+<color name="c4285f4">#FF4285f4</color>
+
+
+
+
+
+///Instat App Colors End
+    <!-- Instat App Colors Start -->
+    <color name="c201d1d">#FF201d1d</color>
+    <color name="cbdbdbd">#FFbdbdbd</color>
+    <color name="c201D1D">#FF201D1D</color>
+    <color name="c344054">#FF344054</color>
+    <color name="c504A4A">#FF504A4A</color>
+    <color name="c8A8A8A">#FF8A8A8A</color>
+    <color name="c18B155">#FF18B155</color>
+    <color name="cF2F2F2">#FFF2F2F2</color>
+    <color name="cEA4335">#FFEA4335</color>
+    <color name="cFF4F42">#FFFF4F42</color>
+    <color name="c818181">#FF818181</color>
+    <color name="cC8CACC">#FFC8CACC</color>
+    <color name="c5E5F60">#FF5E5F60</color>
+    <color name="c363333">#FF363333</color>
+    <color name="cfbfbfb">#FFfbfbfb</color>
+    <color name="cf8bb04">#FFf8bb04</color>
+    <color name="cfafafa">#FFfafafa</color>
+    <color name="c211e1e">#211e1e</color>
+    <color name="cFAB157">#FFFAB157</color>
+    <color name="cf8f9fa">#FFF8F9Fa</color>
+    <color name="cBCF2C9">#FFBCF2C9</color>
+    <color name="cf5efaa">#FFF5EFAA</color>
+    <color name="cBCBCBC">#FFBCBCBC</color>
+    <color name="c8cb1d1">#FF8cb1d1</color>
+    <color name="ccabaoc">#FFCABA0C</color>
+    <color name="c0000FF">#FF0000FF</color>
+    <color name="cb0b9c6">#FFb0b9c6</color>
+    <color name="cF5EFAA">#FFF5EFAA</color>
+    <color name="cCBBB0C">#FFCBBB0C</color>
+    <color name="cF5EFAA">#FFF5EFAA</color>
+    <color name="cBCF2C9">#FFBCF2C9</color>
+
+    <!-- Instat App Colors End -->
+
+
+
+
+
+  
+</colors>

@@ -1,0 +1,50 @@
+/* import 'package:flutter/material.dart';
+
+
+import 'constants/app_constants.dart';
+
+import 'helpers/di.dart';
+import 'helpers/helper_methods.dart';
+import 'networks/dio/dio.dart';
+
+final class Loading extends StatefulWidget {
+  const Loading({super.key});
+
+  @override
+  State<Loading> createState() => _LoadingState();
+}
+
+class _LoadingState extends State<Loading> {
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    loadInitialData();
+    super.initState();
+  }
+
+  loadInitialData() async {
+    await setInitValue();
+
+    bool isLoggedIn = appData.read(kKeyIsLoggedIn) ?? false;
+
+    if (isLoggedIn) {
+      String token = appData.read(kKeyAccessToken);
+      DioSingleton.instance.update(token);
+    }
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_isLoading) {
+      return const SplashScreen();
+    } else {
+      bool isLoggedIn = appData.read(kKeyIsLoggedIn) ?? false;
+      return isLoggedIn ? NavigationScreen(initialIndex: 2) : SignInScreen();
+    }
+  }
+}
+ */
