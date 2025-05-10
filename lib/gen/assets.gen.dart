@@ -12,8 +12,23 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/apple_icon.svg
+  String get appleIcon => 'assets/icons/apple_icon.svg';
+
   /// File path: assets/icons/arrow_down.svg
   String get arrowDown => 'assets/icons/arrow_down.svg';
+
+  /// File path: assets/icons/back.svg
+  String get back => 'assets/icons/back.svg';
+
+  /// File path: assets/icons/eye_off.svg
+  String get eyeOff => 'assets/icons/eye_off.svg';
+
+  /// File path: assets/icons/eye_on.svg
+  String get eyeOn => 'assets/icons/eye_on.svg';
+
+  /// File path: assets/icons/google_icon.svg
+  String get googleIcon => 'assets/icons/google_icon.svg';
 
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
@@ -22,7 +37,16 @@ class $AssetsIconsGen {
   String get nextButton => 'assets/icons/next_button.svg';
 
   /// List of all assets
-  List<String> get values => [arrowDown, logo, nextButton];
+  List<String> get values => [
+    appleIcon,
+    arrowDown,
+    back,
+    eyeOff,
+    eyeOn,
+    googleIcon,
+    logo,
+    nextButton,
+  ];
 }
 
 class $AssetsImagesGen {

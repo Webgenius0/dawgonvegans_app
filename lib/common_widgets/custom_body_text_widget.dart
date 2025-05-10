@@ -16,16 +16,14 @@ class CustomBodyTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        UIHelper.verticalSpace(10.h),
-        Text(titleText, style: TextFontStyle.textStyle24c101820NunitoW700),
+      
+        Text(titleText, style: TextFontStyle.textStyle32c202531ManropeW600),
         UIHelper.verticalSpace(5.h),
-        Text(
-          subTitleText,
-          style: TextFontStyle.textStyle15c101820NunitoSansW400,
-        ),
-        UIHelper.verticalSpace(20.h),
+        Text(subTitleText, style: TextFontStyle.textStyle14c202531ManropeW500),
+        UIHelper.verticalSpace(30.h),
       ],
     );
   }

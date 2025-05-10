@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../constants/text_font_style.dart';
 import '../gen/colors.gen.dart';
 
@@ -31,16 +32,16 @@ class CustomButton extends StatelessWidget {
     return MaterialButton(
       shape: RoundedRectangleBorder(
         side: side ?? BorderSide(color: AppColors.c000000, width: 1.w),
-        borderRadius: BorderRadius.circular(borderRadius ?? 10.r),
+        borderRadius: BorderRadius.circular(borderRadius ?? 100.r),
       ),
       padding: padding ?? EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       onPressed: onPressed,
-      color: color ?? AppColors.c000000,
+      color: color ?? AppColors.cFE8204,
       minWidth: width ?? 1.sw,
       height: height ?? 50.h,
       child: Text(
         buttonName,
-        style: textStyle ?? TextFontStyle.textStyle16c101820Nunitow800,
+        style: textStyle ?? TextFontStyle.textStyle14cFFFFFFManropeW600,
       ),
     );
   }

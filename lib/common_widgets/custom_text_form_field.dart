@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 import '../constants/text_font_style.dart';
 import '../gen/colors.gen.dart';
 
@@ -74,7 +73,7 @@ class CustomTextFormField extends StatelessWidget {
     this.style,
     this.hintStyle,
     this.fillColor,
-    this.filled = false,
+    this.filled = true,
     this.obscuringCharacter = '*',
     this.prefixIconColorFilter,
   });
@@ -85,9 +84,8 @@ class CustomTextFormField extends StatelessWidget {
       cursorColor: AppColors.c000000,
       style:
           style ??
-          TextFontStyle.textStyle15c000000NunitoSansSemiBoldw700.copyWith(
-            color: AppColors.c101820,
-            fontWeight: FontWeight.w100,
+          TextFontStyle.textStyle14c00020AManropeW400.copyWith(
+            color: AppColors.c00020A.withValues(alpha: 0.99),
           ),
       obscuringCharacter: obscuringCharacter,
       controller: controller,
@@ -102,18 +100,19 @@ class CustomTextFormField extends StatelessWidget {
       onFieldSubmitted: onFieldSubmitted,
       validator: validator,
       textInputAction: textInputAction,
-      inputFormatters: inputFormatters, //
+      inputFormatters: inputFormatters,
       onTap: onTap,
       decoration: InputDecoration(
         hintStyle:
             hintStyle ??
-            TextFontStyle.textStyle15c000000NunitoSansSemiBoldw700.copyWith(
-              color: AppColors.cB4B6B4,
+            TextFontStyle.textStyle14c00020AManropeW400.copyWith(
+              color: AppColors.c00020A.withValues(alpha: 0.99),
             ),
-        fillColor: fillColor,
+        fillColor: fillColor ?? AppColors.cFFFFFF,
         filled: filled,
         labelText: labelText,
         hintText: hintText,
+      
         helperText: helperText,
         errorText: errorText,
         prefixIcon:
@@ -130,31 +129,34 @@ class CustomTextFormField extends StatelessWidget {
                 )
                 : null,
         suffixIcon: suffixIcon,
+
         contentPadding:
             contentPadding ??
             EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
+
         border:
             border ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.sp),
-              borderSide: BorderSide(color: AppColors.c8F9098, width: 1.w),
+              borderRadius: BorderRadius.circular(10.sp),
+              borderSide: BorderSide(color: AppColors.cEDEDED, width: 2.w),
             ),
-        /*  enabledBorder:
+        enabledBorder:
             enabledBorder ??
             OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey, width: 1.5.w),
-            ), */
+              borderRadius: BorderRadius.circular(10.sp),
+              borderSide: BorderSide(color: AppColors.cEDEDED, width: 2.w),
+            ),
         focusedBorder:
             focusedBorder ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.sp),
-              borderSide: BorderSide(color: AppColors.cF1C400, width: 1.w),
+              borderRadius: BorderRadius.circular(10.sp),
+              borderSide: BorderSide(color: AppColors.cEDEDED, width: 2.w),
             ),
         errorBorder:
             errorBorder ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.sp),
-              borderSide: BorderSide(color: AppColors.cFF0000, width: 1.w),
+              borderRadius: BorderRadius.circular(10.sp),
+              borderSide: BorderSide(color: AppColors.cFF0000, width: 2.w),
             ),
       ),
     );

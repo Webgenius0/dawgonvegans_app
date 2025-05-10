@@ -70,11 +70,67 @@ class TextFontStyle {
     color: AppColors.c101820,
     fontWeight: FontWeight.w700,
   );
+  static final textStyle32c202531ManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 32.sp,
+    color: AppColors.c202531,
+    fontWeight: FontWeight.w600,
+  );
+  static final textStyle14c202531ManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c202531,
+    fontWeight: FontWeight.w500,
+  );
+  static final textStyle14c202531ManropeW900 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c202531,
+    fontWeight: FontWeight.w900,
+  );
+  static final textStyle14cFE8C00ManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.cFE8C00,
+    fontWeight: FontWeight.w500,
+  );
+  static final textStyle14c878787ManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c878787,
+    fontWeight: FontWeight.w500,
+  );
+  static final textStyle14c0F0F0FManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c0F0F0F,
+    fontWeight: FontWeight.w500,
+  );
+  static final textStyle14cFE8C00ManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.cFE8C00,
+    fontWeight: FontWeight.w600,
+  );
+
+
+  static final textStyle14cFFFFFFManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.cFFFFFF,
+    fontWeight: FontWeight.w600,
+  );
   static final textStyle18c000000NunitoW700 = TextStyle(
     fontFamily: 'Nunito',
     fontSize: 18.sp,
     color: AppColors.c000000,
     fontWeight: FontWeight.w700,
+  );
+  static final textStyle16c202531ManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 16.sp,
+    color: AppColors.c202531,
+    fontWeight: FontWeight.w600,
   );
   static final textStyle10c8F9098NunitoSansW400 = TextStyle(
     fontFamily: 'NunitoSans',
@@ -218,6 +274,13 @@ class TextFontStyle {
     fontWeight: FontWeight.w700,
   );
 
+  static final textStyle14c00020AManropeW400 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c00020A,
+    fontWeight: FontWeight.w400,
+  );
+
   static final textStyle16c101820NunitoSansw800 = TextStyle(
     fontFamily: 'NunitoSans',
     fontSize: 16.sp,
@@ -230,6 +293,7 @@ class TextFontStyle {
     color: AppColors.c101820,
     fontWeight: FontWeight.w800,
   );
+
   static final textStyle16c101820Nunitow400 = TextStyle(
     fontFamily: 'Nunito',
     fontSize: 16.sp,

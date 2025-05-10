@@ -6,6 +6,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 
 import 'constants/custome_theme.dart';
+import 'features/auth/login/login_screen.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/all_routes.dart';
 import 'helpers/di.dart';
@@ -13,7 +14,6 @@ import 'helpers/helper_methods.dart';
 import 'helpers/navigation_service.dart';
 import 'helpers/register_provider.dart';
 import 'networks/dio/dio.dart';
-import 'splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -90,7 +90,7 @@ class UtillScreenMobile extends StatelessWidget {
 
             onGenerateRoute: RouteGenerator.generateRoute,
 
-            home: SplashScreen(),
+            home: LoginScreen(),
           ),
         );
       },
