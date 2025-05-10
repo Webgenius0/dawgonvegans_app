@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dawgonvegans/features/auth/login/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 
 final class Routes {
@@ -13,6 +14,7 @@ final class Routes {
   // App routes Start
   static const String loginScreen = '/loginScreen';
   static const String registerScreen = '/registerScreen';
+  static const String forgetPasswordScreen = '/forgetPasswordScreen';
 }
 
 final class RouteGenerator {
@@ -30,6 +32,10 @@ final class RouteGenerator {
         return Platform.isAndroid
             ? _FadedTransitionRoute(widget: RegisterScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => RegisterScreen());
+      case Routes.forgetPasswordScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(widget: ForgetPasswordScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => ForgetPasswordScreen());
 
       default:
         return null;

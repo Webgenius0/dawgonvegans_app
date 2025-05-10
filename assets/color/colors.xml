@@ -81,7 +81,7 @@
 
    <!-- Initial Colors Start -->
     <color name="scaffoldColor">#FF071112</color>
-    <color name="scaffoldBackgroundColor">#FFF6F6F6</color>
+    <color name="scaffoldBackgroundColor">#FFFFF8F3</color>
     <color name="allPrimaryColor">#FF107631</color>
     <color name="secondaryColor">#FFFFB75A</color>
     <color name="primaruDarki">#FF02BF65</color>

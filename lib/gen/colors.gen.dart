@@ -472,8 +472,8 @@ class AppColors {
   /// Color: #FF02BF65
   static const Color primaruDarki = Color(0xFF02BF65);
 
-  /// Color: #FFF6F6F6
-  static const Color scaffoldBackgroundColor = Color(0xFFF6F6F6);
+  /// Color: #FFFFF8F3
+  static const Color scaffoldBackgroundColor = Color(0xFFFFF8F3);
 
   /// Color: #FF071112
   static const Color scaffoldColor = Color(0xFF071112);
