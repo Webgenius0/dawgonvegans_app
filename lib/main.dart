@@ -6,13 +6,13 @@ import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 
 import 'constants/custome_theme.dart';
-import 'features/auth/reset_password/reset_password_screen.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/all_routes.dart';
 import 'helpers/di.dart';
 import 'helpers/helper_methods.dart';
 import 'helpers/navigation_service.dart';
 import 'helpers/register_provider.dart';
+import 'loading_screen.dart';
 import 'networks/dio/dio.dart';
 
 void main() async {
@@ -90,7 +90,7 @@ class UtillScreenMobile extends StatelessWidget {
 
             onGenerateRoute: RouteGenerator.generateRoute,
 
-            home: ResetPasswordScreen(),
+            home: Loading(),
           ),
         );
       },

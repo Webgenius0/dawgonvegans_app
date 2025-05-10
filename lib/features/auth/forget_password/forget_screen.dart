@@ -1,12 +1,14 @@
 import 'package:dawgonvegans/common_widgets/custom_text_form_field.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/constants/validator.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../common_widgets/custom_appbar.dart';
 import '../../../common_widgets/custom_body_text_widget.dart';
 import '../../../common_widgets/custom_button.dart';
+import '../../../helpers/all_routes.dart';
 import '../../../helpers/ui_helpers.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
@@ -55,9 +57,52 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               UIHelper.verticalSpace(100.h),
               CustomButton(
                 side: BorderSide.none,
-                buttonName: 'Sign In',
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {}
+                buttonName: 'Continue',
+                onPressed: ()  {
+                 // if (_formKey.currentState!.validate()) {}
+
+                 NavigationService.navigateTo(Routes.resetPasswordScreen);
+
+                 /*  await showModalBottomSheet(
+                    context: context,
+                    builder: (_) {
+                      return Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 20.w,
+                          vertical: 20.h,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            /* Text(
+                              'Forgot password?',
+                              style:
+                                  TextFontStyle.textStyle24c202531ManropeW600,
+                            ),
+                            UIHelper.verticalSpace(5.h),
+                            Text(
+                              'Select which contact details should we use to reset your password',
+                              style:
+                                  TextFontStyle.textStyle14c202531ManropeW500,
+                            ),
+                            UIHelper.verticalSpace(20.h), */
+
+
+                            /* ListTile(
+
+                              leading: ,
+
+
+                            ) */
+
+
+                            
+                          ],
+                        ),
+                      );
+                    },
+                  ); */
                 },
               ),
             ],

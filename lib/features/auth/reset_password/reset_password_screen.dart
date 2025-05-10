@@ -1,6 +1,7 @@
 import 'package:dawgonvegans/common_widgets/custom_text_form_field.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/constants/validator.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -120,8 +121,61 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   CustomButton(
                     side: BorderSide.none,
                     buttonName: 'Verify Account',
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {}
+                    onPressed: () async {
+                      //   if (_formKey.currentState!.validate()) {}
+
+                      await showModalBottomSheet(
+                        context: context,
+                        //    isDismissible: false,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(25.r),
+                            topRight: Radius.circular(25.r),
+                          ),
+                        ),
+                        builder:
+                            (_) => Container(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 30.h,
+                                horizontal: 20.w,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Image.asset(
+                                    width: 200.w,
+                                    height: 200.h,
+                                    Assets.images.resetSuccess.path,
+                                  ),
+
+                                  Text(
+                                    'password Changed',
+                                    style:
+                                        TextFontStyle
+                                            .textStyle24c202531ManropeW600,
+                                  ),
+                                  UIHelper.verticalSpace(5.h),
+                                  Text(
+                                    'Password changed successfully, you can login again with a new password',
+                                    style:
+                                        TextFontStyle
+                                            .textStyle14c202531ManropeW500,
+                                  ),
+
+                                  UIHelper.verticalSpace(30.h),
+
+                                  CustomButton(
+                                    side: BorderSide.none,
+                                    buttonName: 'Continue',
+                                    onPressed: () {
+                                      NavigationService.goBack;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                      );
                     },
                   ),
                 ],

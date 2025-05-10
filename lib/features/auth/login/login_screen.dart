@@ -101,7 +101,9 @@ class _LoginScreenState extends State<LoginScreen> {
               // Forgot password Text
               UIHelper.verticalSpace(10.h),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  NavigationService.navigateTo(Routes.forgetPasswordScreen);
+                },
                 child: Align(
                   alignment: Alignment.topRight,
                   child: Text(
