@@ -6,8 +6,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 
 import 'constants/custome_theme.dart';
-import 'features/auth/forget_password/forget_screen.dart';
-import 'features/auth/register/register_screen.dart';
+import 'features/auth/reset_password/reset_password_screen.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/all_routes.dart';
 import 'helpers/di.dart';
@@ -91,7 +90,7 @@ class UtillScreenMobile extends StatelessWidget {
 
             onGenerateRoute: RouteGenerator.generateRoute,
 
-            home: ForgetPasswordScreen(),
+            home: ResetPasswordScreen(),
           ),
         );
       },

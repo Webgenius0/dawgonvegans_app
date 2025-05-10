@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../provider/login_provider.dart';
 import '../provider/register_provider.dart';
+import '../provider/reset_password_provider.dart';
 
 
 var providers = [
@@ -11,6 +12,10 @@ var providers = [
   ),
   ChangeNotifierProvider<RegisterProvider>(
     create: ((context) => RegisterProvider()),
+  ),
+  
+  ChangeNotifierProvider<ResetPasswordProvider>(
+    create: ((context) => ResetPasswordProvider()),
   ),
   
 ];
