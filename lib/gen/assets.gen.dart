@@ -15,8 +15,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/arrow_down.svg
   String get arrowDown => 'assets/icons/arrow_down.svg';
 
+  /// File path: assets/icons/logo.svg
+  String get logo => 'assets/icons/logo.svg';
+
+  /// File path: assets/icons/next_button.svg
+  String get nextButton => 'assets/icons/next_button.svg';
+
   /// List of all assets
-  List<String> get values => [arrowDown];
+  List<String> get values => [arrowDown, logo, nextButton];
 }
 
 class $AssetsImagesGen {
@@ -26,8 +32,29 @@ class $AssetsImagesGen {
   AssetGenImage get noImageAvailable =>
       const AssetGenImage('assets/images/no_image_available.png');
 
+  /// File path: assets/images/onboarding1.png
+  AssetGenImage get onboarding1 =>
+      const AssetGenImage('assets/images/onboarding1.png');
+
+  /// File path: assets/images/onboarding2.png
+  AssetGenImage get onboarding2 =>
+      const AssetGenImage('assets/images/onboarding2.png');
+
+  /// File path: assets/images/onboarding3.png
+  AssetGenImage get onboarding3 =>
+      const AssetGenImage('assets/images/onboarding3.png');
+
+  /// File path: assets/images/splash.png
+  AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [noImageAvailable];
+  List<AssetGenImage> get values => [
+    noImageAvailable,
+    onboarding1,
+    onboarding2,
+    onboarding3,
+    splash,
+  ];
 }
 
 class $AssetsLottieGen {

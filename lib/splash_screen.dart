@@ -1,8 +1,6 @@
-/* import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'gen/assets.gen.dart';
-import 'gen/colors.gen.dart';
 
 final class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -10,16 +8,17 @@ final class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.cF1C400,
-      body: Center(
-        child: SvgPicture.asset(
-          width: 250.w,
-          height: 170.h,
-          Assets.icons.logo,
-          fit: BoxFit.cover,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(Assets.images.splash.path),
+          ),
+        ),
+        child: Center(
+          child: SvgPicture.asset(Assets.icons.logo, fit: BoxFit.cover),
         ),
       ),
     );
   }
 }
- */
