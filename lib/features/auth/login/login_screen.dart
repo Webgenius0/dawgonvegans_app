@@ -1,6 +1,3 @@
-import 'dart:developer';
-
-import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
 import 'package:dawgonvegans/common_widgets/custom_text_form_field.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/constants/validator.dart';
@@ -10,12 +7,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
+import '../../../common_widgets/custom_appbar.dart';
 import '../../../common_widgets/custom_body_text_widget.dart';
 import '../../../common_widgets/custom_button.dart';
 import '../../../common_widgets/custom_horizontal_widget.dart';
 import '../../../common_widgets/social_icon_widget.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
+import '../../../helpers/all_routes.dart';
+import '../../../helpers/navigation_service.dart';
 import '../../../helpers/ui_helpers.dart';
 import '../../../provider/login_provider.dart';
 
@@ -83,14 +83,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           provider.passwordVisible
                               ? SvgPicture.asset(
                                 Assets.icons.eyeOn,
-                                width: 24.w,
-                                height: 24.h,
+                                width: 25.w,
+                                height: 25.h,
                                 fit: BoxFit.none,
                               )
                               : SvgPicture.asset(
                                 Assets.icons.eyeOff,
-                                width: 24.w,
-                                height: 24.h,
+                                width: 25.w,
+                                height: 25.h,
                                 fit: BoxFit.none,
                               ),
                     ),
@@ -144,8 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         recognizer:
                             TapGestureRecognizer()
                               ..onTap = () {
-                                // Add your navigation logic here
-                                log('Tapped me');
+                                    NavigationService.navigateTo(Routes.registerScreen);
                               },
                       ),
                     ],
