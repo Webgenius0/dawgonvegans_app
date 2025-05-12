@@ -2,12 +2,13 @@ import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
 import 'package:dawgonvegans/common_widgets/custom_button.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/gen/assets.gen.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../common_widgets/custom_alert_dialog.dart';
 import '../../gen/colors.gen.dart';
+import '../../helpers/all_routes.dart';
 
 class PaymentMethodScreen extends StatelessWidget {
   const PaymentMethodScreen({super.key});
@@ -60,8 +61,12 @@ class PaymentMethodScreen extends StatelessWidget {
                   context: context,
                   title: 'Welcome to SuperClub!',
                   subTitle: 'You have successfully subscribed to SuperClub!',
-                  onPressed: () {},
-                  buttonText: 'Ok'
+                  onPressed: () {
+                    NavigationService.navigateToReplacement(
+                      Routes.navigationScreen,
+                    );
+                  },
+                  buttonText: 'Ok',
                 );
               },
               side: BorderSide.none,

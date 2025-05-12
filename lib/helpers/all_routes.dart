@@ -8,6 +8,7 @@ import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
+import '../navigation_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -21,6 +22,7 @@ final class Routes {
   static const String resetPasswordScreen = '/resetPasswordScreen';
   static const String membershipScreen = '/membershipScreen';
   static const String paymentMethodScreen = '/paymentMethodScreen';
+  static const String navigationScreen = '/navigationScreen';
 }
 
 final class RouteGenerator {
@@ -69,6 +71,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => PaymentMethodScreen());
+      case Routes.navigationScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: NavigationScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => NavigationScreen());
 
       default:
         return null;
