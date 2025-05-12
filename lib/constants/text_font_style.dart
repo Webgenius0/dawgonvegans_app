@@ -76,6 +76,18 @@ class TextFontStyle {
     color: AppColors.c202531,
     fontWeight: FontWeight.w600,
   );
+  static final textStyle24cFE8204ManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 24.sp,
+    color: AppColors.cFE8204,
+    fontWeight: FontWeight.w600,
+  );
+  static final textStyle16c00020AManropeW400 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 16.sp,
+    color: AppColors.c00020A,
+    fontWeight: FontWeight.w400,
+  );
   static final textStyle24c202531ManropeW600 = TextStyle(
     fontFamily: 'manrope',
     fontSize: 24.sp,
@@ -99,8 +111,6 @@ class TextFontStyle {
     fontSize: 12.sp,
     color: AppColors.c878787,
     fontWeight: FontWeight.w400,
-
- 
   );
   static final textStyle14c202531ManropeW900 = TextStyle(
     fontFamily: 'manrope',
@@ -299,6 +309,12 @@ class TextFontStyle {
     color: AppColors.c00020A,
     fontWeight: FontWeight.w400,
   );
+  static final textStyle12cFE8C00ManropeW400 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 12.sp,
+    color: AppColors.cFE8C00,
+    fontWeight: FontWeight.w400,
+  );
   static final textStyle32cFFFFFFManropeW600 = TextStyle(
     fontFamily: 'manrope',
     fontSize: 32.sp,
@@ -317,7 +333,6 @@ class TextFontStyle {
     color: AppColors.cFAFAFA,
     fontWeight: FontWeight.w400,
   );
- 
 
   static final textStyle16c101820NunitoSansw800 = TextStyle(
     fontFamily: 'NunitoSans',

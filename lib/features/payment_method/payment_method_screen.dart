@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../common_widgets/custom_alert_dialog.dart';
 import '../../gen/colors.gen.dart';
 
 class PaymentMethodScreen extends StatelessWidget {
@@ -54,7 +55,15 @@ class PaymentMethodScreen extends StatelessWidget {
 
             CustomButton(
               buttonName: 'Pay Now (\$200)',
-              onPressed: () {},
+              onPressed: () {
+                showCustomDialog(
+                  context: context,
+                  title: 'Welcome to SuperClub!',
+                  subTitle: 'You have successfully subscribed to SuperClub!',
+                  onPressed: () {},
+                  buttonText: 'Ok'
+                );
+              },
               side: BorderSide.none,
             ),
           ],

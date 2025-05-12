@@ -1,126 +1,100 @@
+import 'dart:ui';
+
+import 'package:dawgonvegans/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import '../constants/text_font_style.dart';
 
-import '../gen/assets.gen.dart';
+import '../constants/text_font_style.dart';
 import '../gen/colors.gen.dart';
 import '../helpers/ui_helpers.dart';
-import 'custom_button.dart';
+import 'custom_button.dart'; // For ImageFilter
 
 Future<void> showCustomDialog({
   required BuildContext context,
   String? icon,
   String? title,
   String? subTitle,
-  String? button1Text,
+  String? buttonText,
+  required VoidCallback onPressed,
   TextStyle? titleTextStyle,
   TextStyle? subTitleTextStyle,
-  String? button2Text,
-  VoidCallback? button1Action,
-  VoidCallback? button2Action,
-  TextAlign? titleAlign,
-  TextAlign? subTitleAlign,
 }) {
-  return showDialog(
+  return showGeneralDialog(
     context: context,
-    barrierDismissible: false,
-    builder:
-        (context) => AlertDialog(
+    barrierDismissible: true,
+    barrierLabel: '',
+    pageBuilder: (context, animation, secondaryAnimation) {
+      return BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+        child: Dialog(
           backgroundColor: Colors.transparent,
-          contentPadding: EdgeInsets.zero,
-          content: Container(
+       //   insetPadding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Container(
             decoration: ShapeDecoration(
               color: AppColors.cFFFFFF,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16.r),
+                borderRadius: BorderRadius.circular(40.r),
               ),
-              shadows: [
+              /*  shadows: [
                 BoxShadow(
                   color: const Color(0x0C000000),
                   blurRadius: 13.r,
                   offset: Offset(-3.w, 7.r),
                 ),
-              ],
+              ], */
             ),
-            padding: EdgeInsets.symmetric(horizontal: 15.w),
+           // padding: EdgeInsets.symmetric(horizontal: 15.w),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 UIHelper.verticalSpaceMediumLarge,
 
-                // Icon
                 SvgPicture.asset(
-                  icon ?? Assets.icons.arrowDown,
+                  icon ?? Assets.icons.superClub,
                   fit: BoxFit.none,
-                  width: 40.w,
-                  height: 40.h,
+                  width: 115.w,
+                  height: 120.h,
                 ),
 
-                // Title
-                UIHelper.verticalSpace(5.h),
+                UIHelper.verticalSpace(15.h),
                 Text(
                   title ?? "Title Here",
-                  textAlign: titleAlign,
+                  textAlign: TextAlign.center,
                   style:
                       titleTextStyle ??
-                      TextFontStyle.textStyle24cF1C400NunitoW700,
+                      TextFontStyle.textStyle24cFE8204ManropeW600,
                 ),
 
-                // SubTitle
-                UIHelper.verticalSpace(8.h),
+                UIHelper.verticalSpace(15.h),
                 Text(
                   subTitle ?? "Sub Title Here",
                   style:
                       subTitleTextStyle ??
-                      TextFontStyle.textStyle15c101820NunitoW400,
-                  textAlign: subTitleAlign,
+                      TextFontStyle.textStyle16c00020AManropeW400.copyWith(
+                        color: AppColors.c00020A.withAlpha(252), // 0.99 * 255
+                      ),
+                  textAlign: TextAlign.center,
                 ),
 
-                // Conditional Spacing if buttons exist
-                if (button1Text != null ||
-                    button1Action != null ||
-                    button2Text != null ||
-                    button2Action != null)
-                  UIHelper.verticalSpace(20.h),
+                UIHelper.verticalSpace(15.h),
+                CustomButton(
+                  buttonName: buttonText ?? "Button",
+                  onPressed: onPressed,
+                  color: AppColors.cFE8204,
+                  side: BorderSide.none,
+                  width: 125.w,
+                  textStyle: TextFontStyle.textStyle14cFFFFFFManropeW600,
+                  borderRadius: 100.r,
+                ),
 
-                // Button 1 (optional)
-                if (button1Text != null || button1Action != null)
-                  CustomButton(
-                    buttonName: button1Text ?? "Button 1",
-                    onPressed: button1Action,
-                    color: AppColors.cF1C400,
-                    side: BorderSide.none,
-                    textStyle: TextFontStyle.textStyle16c101820Nunitow800,
-                    borderRadius: 14.r,
-                  ),
-
-                // Spacing between buttons (only if both exist)
-                if ((button1Text != null || button1Action != null) &&
-                    (button2Text != null || button2Action != null))
-                  UIHelper.verticalSpace(10.h),
-
-                // Button 2 (optional)
-                if (button2Text != null || button2Action != null)
-                  CustomButton(
-                    buttonName: button2Text ?? "Button 2",
-                    onPressed: button2Action,
-                    color: AppColors.cF1C400,
-                    side: BorderSide.none,
-                    textStyle: TextFontStyle.textStyle16c101820Nunitow800,
-                    borderRadius: 14.r,
-                  ),
-
-                // Bottom Spacing if buttons exist
-                if (button1Text != null ||
-                    button1Action != null ||
-                    button2Text != null ||
-                    button2Action != null)
-                  UIHelper.verticalSpace(30.h),
+                UIHelper.verticalSpace(20.h),
               ],
             ),
           ),
         ),
+      );
+    },
   );
 }

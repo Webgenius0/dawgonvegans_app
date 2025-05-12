@@ -1,112 +1,61 @@
-/* import 'package:flutter/material.dart';
+import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/gen/assets.gen.dart';
+import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import 'constants/text_font_style.dart';
-
-import 'gen/assets.gen.dart';
 import 'gen/colors.gen.dart';
 
 class NavigationScreen extends StatefulWidget {
-  final int initialIndex;
-  const NavigationScreen({super.key, required this.initialIndex});
+  const NavigationScreen({super.key});
 
   @override
   State<NavigationScreen> createState() => _NavigationScreenState();
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
-  late int _selectedIndex; // Manage the state locally
-
-  final List<Widget> _screen = const [
-    TaskScreen(),
-    EvolutionScreen(),
-    HomeScreen(),
-    RankingScreen(),
-    SocialScreen(),
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-    _selectedIndex = widget.initialIndex; // Initialize the state
-  }
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Stack(
-        children: [
-          _screen[_selectedIndex], // Use the local state variable
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              margin: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-              padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-              decoration: ShapeDecoration(
-                color: AppColors.cFFFFFF,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.r),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _buildNavItem(Assets.icons.tarefasBottomIcon, "Tarefas", 0),
-                  _buildNavItem(Assets.icons.evolucaoBottomIcon, "Evolução", 1),
-                  _buildNavItem(Assets.icons.homeBottomIcon, "Início", 2),
-                  _buildNavItem(Assets.icons.rankingBottomIcon, "Ranking", 3),
-                  _buildNavItem(Assets.icons.socialBottomIcon, "Social", 4),
-                ],
-              ),
-            ),
+      bottomNavigationBar: FlashyTabBar(
+        backgroundColor: AppColors.cFFFFFF,
+        selectedIndex: _selectedIndex,
+        height: 70.h,
+        showElevation: true,
+        animationCurve: Curves.ease,
+        onItemSelected:
+            (index) => setState(() {
+              _selectedIndex = index;
+            }),
+        items: [
+          _flashyTabBarItemWidget(icon: Assets.icons.homeBarIcon, text: 'Feed'),
+          _flashyTabBarItemWidget(
+            icon: Assets.icons.menuBarIcon,
+            text: 'Menu ',
           ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildNavItem(String icon, String label, int index) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          _selectedIndex = index; // Update the local state
-        });
-      },
-      child: Column(
-        spacing: 4.h,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SvgPicture.asset(
-            icon,
-            width: 20.w,
-            height: 20.h,
-            fit: BoxFit.contain,
-            colorFilter: ColorFilter.mode(
-              _selectedIndex == index ? AppColors.cF1C400 : AppColors.c101820,
-              BlendMode.srcIn,
-            ),
+          _flashyTabBarItemWidget(
+            icon: Assets.icons.eventBarIcon,
+            text: 'Event',
           ),
-          Text(
-            label,
-            style: TextFontStyle.textStyle10c101820NunitoSansW600.copyWith(
-              color:
-                  _selectedIndex == index
-                      ? AppColors.cF1C400
-                      : AppColors.c101820,
-            ),
-          ),
-          SvgPicture.asset(
-            Assets.icons.dotIcon,
-            colorFilter: ColorFilter.mode(
-              _selectedIndex == index ? AppColors.cF1C400 : Colors.transparent,
-              BlendMode.srcIn,
-            ),
+          _flashyTabBarItemWidget(
+            icon: Assets.icons.userBarIcon,
+            text: 'Profile',
           ),
         ],
       ),
     );
   }
 }
- */
+
+FlashyTabBarItem _flashyTabBarItemWidget({
+  required String icon,
+  required String text,
+}) {
+  return FlashyTabBarItem(
+    icon: SvgPicture.asset(icon, width: 30.w, height: 30.h, fit: BoxFit.none),
+    title: Text(text, style: TextFontStyle.textStyle12cFE8C00ManropeW400),
+  );
+}

@@ -24,6 +24,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/check.svg
   String get check => 'assets/icons/check.svg';
 
+  /// File path: assets/icons/event_bar_icon.svg
+  String get eventBarIcon => 'assets/icons/event_bar_icon.svg';
+
   /// File path: assets/icons/eye_off.svg
   String get eyeOff => 'assets/icons/eye_off.svg';
 
@@ -33,8 +36,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/google_icon.svg
   String get googleIcon => 'assets/icons/google_icon.svg';
 
+  /// File path: assets/icons/home_bar_icon.svg
+  String get homeBarIcon => 'assets/icons/home_bar_icon.svg';
+
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
+
+  /// File path: assets/icons/menu_bar_icon.svg
+  String get menuBarIcon => 'assets/icons/menu_bar_icon.svg';
 
   /// File path: assets/icons/next_button.svg
   String get nextButton => 'assets/icons/next_button.svg';
@@ -45,19 +54,30 @@ class $AssetsIconsGen {
   /// File path: assets/icons/square_logo.svg
   String get squareLogo => 'assets/icons/square_logo.svg';
 
+  /// File path: assets/icons/super_club.svg
+  String get superClub => 'assets/icons/super_club.svg';
+
+  /// File path: assets/icons/user_bar_icon.svg
+  String get userBarIcon => 'assets/icons/user_bar_icon.svg';
+
   /// List of all assets
   List<String> get values => [
     appleIcon,
     arrowDown,
     back,
     check,
+    eventBarIcon,
     eyeOff,
     eyeOn,
     googleIcon,
+    homeBarIcon,
     logo,
+    menuBarIcon,
     nextButton,
     paymentIcon,
     squareLogo,
+    superClub,
+    userBarIcon,
   ];
 }
 
