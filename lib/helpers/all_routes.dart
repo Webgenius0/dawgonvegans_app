@@ -1,11 +1,13 @@
 import 'dart:io';
 
 import 'package:dawgonvegans/features/auth/login/login_screen.dart';
+import 'package:dawgonvegans/features/membership/presentation/membership_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
+import '../features/payment_method/payment_method_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -17,7 +19,8 @@ final class Routes {
   static const String registerScreen = '/registerScreen';
   static const String forgetPasswordScreen = '/forgetPasswordScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
-
+  static const String membershipScreen = '/membershipScreen';
+  static const String paymentMethodScreen = '/paymentMethodScreen';
 }
 
 final class RouteGenerator {
@@ -33,16 +36,39 @@ final class RouteGenerator {
             : CupertinoPageRoute(builder: (context) => LoginScreen());
       case Routes.registerScreen:
         return Platform.isAndroid
-            ? _FadedTransitionRoute(widget: RegisterScreen(), settings: settings)
+            ? _FadedTransitionRoute(
+              widget: RegisterScreen(),
+              settings: settings,
+            )
             : CupertinoPageRoute(builder: (context) => RegisterScreen());
       case Routes.forgetPasswordScreen:
         return Platform.isAndroid
-            ? _FadedTransitionRoute(widget: ForgetPasswordScreen(), settings: settings)
+            ? _FadedTransitionRoute(
+              widget: ForgetPasswordScreen(),
+              settings: settings,
+            )
             : CupertinoPageRoute(builder: (context) => ForgetPasswordScreen());
       case Routes.resetPasswordScreen:
         return Platform.isAndroid
-            ? _FadedTransitionRoute(widget: ResetPasswordScreen(), settings: settings)
+            ? _FadedTransitionRoute(
+              widget: ResetPasswordScreen(),
+              settings: settings,
+            )
             : CupertinoPageRoute(builder: (context) => ResetPasswordScreen());
+      case Routes.membershipScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: MembershipScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => MembershipScreen());
+      case Routes.paymentMethodScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: PaymentMethodScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => PaymentMethodScreen());
 
       default:
         return null;

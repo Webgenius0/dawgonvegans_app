@@ -39,6 +39,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/next_button.svg
   String get nextButton => 'assets/icons/next_button.svg';
 
+  /// File path: assets/icons/payment_icon.svg
+  String get paymentIcon => 'assets/icons/payment_icon.svg';
+
+  /// File path: assets/icons/square_logo.svg
+  String get squareLogo => 'assets/icons/square_logo.svg';
+
   /// List of all assets
   List<String> get values => [
     appleIcon,
@@ -50,6 +56,8 @@ class $AssetsIconsGen {
     googleIcon,
     logo,
     nextButton,
+    paymentIcon,
+    squareLogo,
   ];
 }
 
@@ -76,6 +84,9 @@ class $AssetsImagesGen {
   AssetGenImage get resetSuccess =>
       const AssetGenImage('assets/images/reset_success.png');
 
+  /// File path: assets/images/s.png
+  AssetGenImage get s => const AssetGenImage('assets/images/s.png');
+
   /// File path: assets/images/splash.png
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
 
@@ -86,6 +97,7 @@ class $AssetsImagesGen {
     onboarding2,
     onboarding3,
     resetSuccess,
+    s,
     splash,
   ];
 }

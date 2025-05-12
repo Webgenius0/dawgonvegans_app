@@ -5,6 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../common_widgets/custom_body_text_widget.dart';
 import '../../../gen/colors.gen.dart';
+import '../../../helpers/all_routes.dart';
+import '../../../helpers/navigation_service.dart';
 import '../widgets/membership_widget.dart';
 
 class MembershipScreen extends StatefulWidget {
@@ -30,7 +32,9 @@ class _MembershipScreenState extends State<MembershipScreen> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                 NavigationService.navigateTo(Routes.paymentMethodScreen);
+              },
               child: Text(
                 'Skip',
                 style: TextFontStyle.textStyle12c202531ManropeW600,

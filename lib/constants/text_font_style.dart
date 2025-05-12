@@ -94,6 +94,14 @@ class TextFontStyle {
     color: AppColors.c202531,
     fontWeight: FontWeight.w500,
   );
+  static final textStyle12c878787ManropeW400 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 12.sp,
+    color: AppColors.c878787,
+    fontWeight: FontWeight.w400,
+
+ 
+  );
   static final textStyle14c202531ManropeW900 = TextStyle(
     fontFamily: 'manrope',
     fontSize: 14.sp,
@@ -309,6 +317,7 @@ class TextFontStyle {
     color: AppColors.cFAFAFA,
     fontWeight: FontWeight.w400,
   );
+ 
 
   static final textStyle16c101820NunitoSansw800 = TextStyle(
     fontFamily: 'NunitoSans',

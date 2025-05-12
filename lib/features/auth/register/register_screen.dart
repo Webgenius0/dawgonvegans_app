@@ -184,7 +184,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 side: BorderSide.none,
                 buttonName: 'Register',
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {}
+                 // if (_formKey.currentState!.validate()) {}
+                 NavigationService.navigateTo(Routes.membershipScreen);
                 },
               ),
 

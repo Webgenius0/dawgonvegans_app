@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../constants/text_font_style.dart';
+import '../../../helpers/all_routes.dart';
+import '../../../helpers/navigation_service.dart';
 
 class MembershipWidget extends StatelessWidget {
   final String memberShipType;
@@ -88,13 +90,13 @@ class MembershipWidget extends StatelessWidget {
             child: Divider(color: AppColors.cEEEEEE, thickness: 1.w),
           ),
 
-          UIHelper.verticalSpace(15.h),
-
-          Padding(
+           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: CustomButton(
               buttonName: 'Selecte Plan',
-              onPressed: () {},
+              onPressed: () {
+                NavigationService.navigateTo(Routes.paymentMethodScreen);
+              },
               side: BorderSide.none,
             ),
           ),
