@@ -18,6 +18,30 @@ class HomeFeedScreen extends StatefulWidget {
 }
 
 class _HomeFeedScreenState extends State<HomeFeedScreen> {
+  Set<int> isFavoriteList = {};
+
+  void toogleUpdateFavorite(int index) {
+    setState(() {
+      if (isFavoriteList.contains(index)) {
+        isFavoriteList.remove(index);
+      } else {
+        isFavoriteList.add(index);
+      }
+    });
+  }
+
+  Set<int> isLikeList = {};
+
+  void toogleUpdateLike(int index) {
+    setState(() {
+      if (isLikeList.contains(index)) {
+        isLikeList.remove(index);
+      } else {
+        isLikeList.add(index);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,14 +104,24 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (_, index) {
-                return FoodCardWidget(
-                  image: Assets.images.food.path,
-                  foodName: 'Food Truck Friday',
-                  foodStatus: 'Upcoming',
-                  foodDescription: 'Warm up with our new seasonal specials',
-                  totalLikes: '234 likes',
-                  totalComments: '45 comments',
-                  times: '2 hours ago',
+                final isFavorite = isFavoriteList.contains(index);
+                final isLike = isLikeList.contains(index);
+                return InkWell(
+                  onTap: () {
+                    toogleUpdateFavorite(index);
+                  //  toogleUpdateLike(index);
+                  },
+                  child: FoodCardWidget(
+                    image: Assets.images.food.path,
+                    foodName: 'Food Truck Friday',
+                    foodStatus: 'Upcoming',
+                    foodDescription: 'Warm up with our new seasonal specials',
+                    totalLikes: '234 likes',
+                    totalComments: '45 comments',
+                    times: '2 hours ago',
+                    isFavorite: isFavorite,
+                    isLike: isLike,
+                  ),
                 );
               },
             ),

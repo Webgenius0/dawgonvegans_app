@@ -15,6 +15,8 @@ class FoodCardWidget extends StatelessWidget {
   final String totalLikes;
   final String totalComments;
   final String times;
+  final bool isFavorite;
+  final bool isLike;
 
   const FoodCardWidget({
     super.key,
@@ -25,6 +27,8 @@ class FoodCardWidget extends StatelessWidget {
     required this.totalLikes,
     required this.totalComments,
     required this.times,
+    required this.isFavorite,
+    required this.isLike,
   });
 
   @override
@@ -90,12 +94,22 @@ class FoodCardWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12.r),
                   color: AppColors.cF5F5F5,
                 ),
-                child: SvgPicture.asset(
+                child: isFavorite ? 
+                
+                 SvgPicture.asset(
                   Assets.icons.love,
                   width: 25.w,
                   height: 25.h,
                   fit: BoxFit.none,
-                ),
+                  colorFilter: ColorFilter.mode(AppColors.cFF0000, BlendMode.srcIn),
+                )
+                :  SvgPicture.asset(
+                  Assets.icons.love,
+                  width: 25.w,
+                  height: 25.h,
+                  fit: BoxFit.none,
+                )
+                ,
               ),
             ],
           ),
@@ -119,12 +133,21 @@ class FoodCardWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     // Likes
+                   
+                   isLike ? 
+                   
                     SvgPicture.asset(
                       Assets.icons.like,
                       width: 15.w,
                       height: 15.h,
                       fit: BoxFit.none,
-                    ),
+                          colorFilter: ColorFilter.mode(AppColors.c0000FF, BlendMode.srcIn),
+                    )  : SvgPicture.asset(
+                      Assets.icons.like,
+                      width: 15.w,
+                      height: 15.h,
+                      fit: BoxFit.none,
+                    ) ,
                     Text(
                       totalLikes,
                       style: TextFontStyle.textStyle14c333333ManropeW400,
