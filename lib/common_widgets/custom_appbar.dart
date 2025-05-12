@@ -35,21 +35,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: InkWell(
-        onTap: () => NavigationService.goBack,
-        child:
-            leading ??
-            SvgPicture.asset(
+      leading:
+          leading ??
+          InkWell(
+            onTap: () => NavigationService.goBack,
+            child: SvgPicture.asset(
               Assets.icons.back,
               width: 30.w,
               height: 30.h,
               fit: BoxFit.none,
             ),
-      ),
-      title: title ?? Text(
-        text ?? '',
-        style: style ?? TextFontStyle.textStyle16c202531ManropeW600,
-      ),
+          ),
+      title:
+          title ??
+          Text(
+            text ?? '',
+            style: style ?? TextFontStyle.textStyle16c202531ManropeW600,
+          ),
       centerTitle: centerTitle,
       automaticallyImplyLeading: automaticallyImplyLeading,
       actions: actions,

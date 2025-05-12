@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'features/home_feed/presentation/home_feed_screen.dart';
 import 'gen/colors.gen.dart';
 
 class NavigationScreen extends StatefulWidget {
@@ -15,11 +16,18 @@ class NavigationScreen extends StatefulWidget {
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
+
+
+  final List<Widget> _widgetList = [
+
+    HomeFeedScreen()
+  ];
   int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: _widgetList[_selectedIndex],
       bottomNavigationBar: FlashyTabBar(
         backgroundColor: AppColors.cFFFFFF,
         selectedIndex: _selectedIndex,

@@ -24,6 +24,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/check.svg
   String get check => 'assets/icons/check.svg';
 
+  /// File path: assets/icons/comments.svg
+  String get comments => 'assets/icons/comments.svg';
+
   /// File path: assets/icons/event_bar_icon.svg
   String get eventBarIcon => 'assets/icons/event_bar_icon.svg';
 
@@ -39,14 +42,26 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home_bar_icon.svg
   String get homeBarIcon => 'assets/icons/home_bar_icon.svg';
 
+  /// File path: assets/icons/like.svg
+  String get like => 'assets/icons/like.svg';
+
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
+
+  /// File path: assets/icons/love.svg
+  String get love => 'assets/icons/love.svg';
 
   /// File path: assets/icons/menu_bar_icon.svg
   String get menuBarIcon => 'assets/icons/menu_bar_icon.svg';
 
+  /// File path: assets/icons/mesage.svg
+  String get mesage => 'assets/icons/mesage.svg';
+
   /// File path: assets/icons/next_button.svg
   String get nextButton => 'assets/icons/next_button.svg';
+
+  /// File path: assets/icons/notification.svg
+  String get notification => 'assets/icons/notification.svg';
 
   /// File path: assets/icons/payment_icon.svg
   String get paymentIcon => 'assets/icons/payment_icon.svg';
@@ -66,14 +81,19 @@ class $AssetsIconsGen {
     arrowDown,
     back,
     check,
+    comments,
     eventBarIcon,
     eyeOff,
     eyeOn,
     googleIcon,
     homeBarIcon,
+    like,
     logo,
+    love,
     menuBarIcon,
+    mesage,
     nextButton,
+    notification,
     paymentIcon,
     squareLogo,
     superClub,
@@ -83,6 +103,12 @@ class $AssetsIconsGen {
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/avatar.png
+  AssetGenImage get avatar => const AssetGenImage('assets/images/avatar.png');
+
+  /// File path: assets/images/food.png
+  AssetGenImage get food => const AssetGenImage('assets/images/food.png');
 
   /// File path: assets/images/no_image_available.png
   AssetGenImage get noImageAvailable =>
@@ -112,6 +138,8 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+    avatar,
+    food,
     noImageAvailable,
     onboarding1,
     onboarding2,
