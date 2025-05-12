@@ -17,6 +17,8 @@ class FoodCardWidget extends StatelessWidget {
   final String times;
   final bool isFavorite;
   final bool isLike;
+  final VoidCallback onFavoriteToggle;
+  final VoidCallback onLikeToggle;
 
   const FoodCardWidget({
     super.key,
@@ -29,6 +31,8 @@ class FoodCardWidget extends StatelessWidget {
     required this.times,
     required this.isFavorite,
     required this.isLike,
+    required this.onFavoriteToggle,
+    required this.onLikeToggle,
   });
 
   @override
@@ -88,28 +92,33 @@ class FoodCardWidget extends StatelessWidget {
               ),
 
               // Favorite Icon
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.r),
-                  color: AppColors.cF5F5F5,
+              InkWell(
+                onTap: onFavoriteToggle,
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.r),
+                    color: AppColors.cF5F5F5,
+                  ),
+                  child:
+                      isFavorite
+                          ? SvgPicture.asset(
+                            Assets.icons.love,
+                            width: 25.w,
+                            height: 25.h,
+                            fit: BoxFit.none,
+                            colorFilter: ColorFilter.mode(
+                              AppColors.cFF0000,
+                              BlendMode.srcIn,
+                            ),
+                          )
+                          : SvgPicture.asset(
+                            Assets.icons.love,
+                            width: 25.w,
+                            height: 25.h,
+                            fit: BoxFit.none,
+                          ),
                 ),
-                child: isFavorite ? 
-                
-                 SvgPicture.asset(
-                  Assets.icons.love,
-                  width: 25.w,
-                  height: 25.h,
-                  fit: BoxFit.none,
-                  colorFilter: ColorFilter.mode(AppColors.cFF0000, BlendMode.srcIn),
-                )
-                :  SvgPicture.asset(
-                  Assets.icons.love,
-                  width: 25.w,
-                  height: 25.h,
-                  fit: BoxFit.none,
-                )
-                ,
               ),
             ],
           ),
@@ -133,21 +142,28 @@ class FoodCardWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     // Likes
-                   
-                   isLike ? 
-                   
-                    SvgPicture.asset(
-                      Assets.icons.like,
-                      width: 15.w,
-                      height: 15.h,
-                      fit: BoxFit.none,
-                          colorFilter: ColorFilter.mode(AppColors.c0000FF, BlendMode.srcIn),
-                    )  : SvgPicture.asset(
-                      Assets.icons.like,
-                      width: 15.w,
-                      height: 15.h,
-                      fit: BoxFit.none,
-                    ) ,
+                    InkWell(
+                      onTap: onLikeToggle,
+                      child:
+                          isLike
+                              ? SvgPicture.asset(
+                                Assets.icons.like,
+                                width: 15.w,
+                                height: 15.h,
+                                fit: BoxFit.none,
+                                colorFilter: ColorFilter.mode(
+                                  AppColors.c0000FF,
+                                  BlendMode.srcIn,
+                                ),
+                              )
+                              : SvgPicture.asset(
+                                Assets.icons.like,
+                                width: 15.w,
+                                height: 15.h,
+                                fit: BoxFit.none,
+                              ),
+                    ),
+
                     Text(
                       totalLikes,
                       style: TextFontStyle.textStyle14c333333ManropeW400,
