@@ -8,7 +8,7 @@ import '../gen/assets.gen.dart';
 import '../gen/colors.gen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String? title;
+  final String? text;
   final bool automaticallyImplyLeading;
   final List<Widget>? actions;
   final Color? backgroundColor;
@@ -16,14 +16,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool centerTitle;
   final double height;
   final Widget? leading;
+  final Widget? title;
 
   const CustomAppBar({
     super.key,
-    this.title,
+    this.text,
     this.centerTitle = true,
     this.automaticallyImplyLeading = false,
     this.actions,
     this.backgroundColor,
+    this.title,
 
     this.style,
     this.leading,
@@ -44,8 +46,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               fit: BoxFit.none,
             ),
       ),
-      title: Text(
-        title ?? '',
+      title: title ?? Text(
+        text ?? '',
         style: style ?? TextFontStyle.textStyle16c202531ManropeW600,
       ),
       centerTitle: centerTitle,

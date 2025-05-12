@@ -21,6 +21,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/back.svg
   String get back => 'assets/icons/back.svg';
 
+  /// File path: assets/icons/check.svg
+  String get check => 'assets/icons/check.svg';
+
   /// File path: assets/icons/eye_off.svg
   String get eyeOff => 'assets/icons/eye_off.svg';
 
@@ -41,6 +44,7 @@ class $AssetsIconsGen {
     appleIcon,
     arrowDown,
     back,
+    check,
     eyeOff,
     eyeOn,
     googleIcon,

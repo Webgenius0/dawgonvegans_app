@@ -34,7 +34,8 @@ class CustomButton extends StatelessWidget {
         side: side ?? BorderSide(color: AppColors.c000000, width: 1.w),
         borderRadius: BorderRadius.circular(borderRadius ?? 100.r),
       ),
-      padding: padding ?? EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
+      padding:
+          padding ?? EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
       onPressed: onPressed,
       color: color ?? AppColors.cFE8204,
       minWidth: width ?? 1.sw,
