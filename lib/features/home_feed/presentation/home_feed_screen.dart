@@ -1,4 +1,6 @@
 import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
+import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,6 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
 import '../widgets/feed_card_widget.dart';
+import '../widgets/food_card_widget.dart';
 
 class HomeFeedScreen extends StatefulWidget {
   const HomeFeedScreen({super.key});
@@ -52,10 +55,42 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             // Card Widget
+            FeedCardWidget(
+              name: 'Dona',
+              points: '2450',
+              level: '01',
+              memberType: 'VIP',
+            ),
 
-            FeedCardWidget(name: 'Dona', points: '2450', level: '01', memberType: 'VIP',)
+            UIHelper.verticalSpace(20.h),
+
+            Text(
+              "Dawn'On Vegans Feed",
+              style: TextFontStyle.textStyle16c666666ManropeW600,
+            ),
+
+            UIHelper.verticalSpace(15.h),
+
+            ListView.separated(
+              separatorBuilder: (context, index) {
+                return SizedBox(height: 20.h);
+              },
+              itemCount: 10,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemBuilder: (_, index) {
+                return FoodCardWidget(
+                  image: Assets.images.food.path,
+                  foodName: 'Food Truck Friday',
+                  foodStatus: 'Upcoming',
+                  foodDescription: 'Warm up with our new seasonal specials',
+                  totalLikes: '234 likes',
+                  totalComments: '45 comments',
+                  times: '2 hours ago',
+                );
+              },
+            ),
           ],
         ),
       ),

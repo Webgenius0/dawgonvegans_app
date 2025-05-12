@@ -11,6 +11,7 @@ class FeedCardWidget extends StatelessWidget {
   final String points;
   final String level;
   final String memberType;
+
   const FeedCardWidget({
     super.key,
     required this.name,
