@@ -3,7 +3,6 @@ import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../common_widgets/custom_alert_dialog.dart';
 import '../widgets/menu_bar_card_widget.dart';
 
 class MenuBarScreen extends StatefulWidget {

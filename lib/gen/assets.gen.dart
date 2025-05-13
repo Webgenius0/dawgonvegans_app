@@ -12,12 +12,6 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/.svg
-  String get aSvg => 'assets/icons/.svg';
-
-  /// File path: assets/icons/Frame 111.svg
-  String get frame111 => 'assets/icons/Frame 111.svg';
-
   /// File path: assets/icons/apple_icon.svg
   String get appleIcon => 'assets/icons/apple_icon.svg';
 
@@ -27,14 +21,17 @@ class $AssetsIconsGen {
   /// File path: assets/icons/back.svg
   String get back => 'assets/icons/back.svg';
 
+  /// File path: assets/icons/caps.svg
+  String get caps => 'assets/icons/caps.svg';
+
   /// File path: assets/icons/check.svg
   String get check => 'assets/icons/check.svg';
 
+  /// File path: assets/icons/clock.svg
+  String get clock => 'assets/icons/clock.svg';
+
   /// File path: assets/icons/comments.svg
   String get comments => 'assets/icons/comments.svg';
-
-  /// File path: assets/icons/cppp.svg
-  String get cppp => 'assets/icons/cppp.svg';
 
   /// File path: assets/icons/discount_icon.svg
   String get discountIcon => 'assets/icons/discount_icon.svg';
@@ -69,9 +66,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/mesage.svg
   String get mesage => 'assets/icons/mesage.svg';
 
-  /// File path: assets/icons/newwwwww.svg
-  String get newwwwww => 'assets/icons/newwwwww.svg';
-
   /// File path: assets/icons/next_button.svg
   String get nextButton => 'assets/icons/next_button.svg';
 
@@ -90,16 +84,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/user_bar_icon.svg
   String get userBarIcon => 'assets/icons/user_bar_icon.svg';
 
+  /// File path: assets/icons/video.svg
+  String get video => 'assets/icons/video.svg';
+
   /// List of all assets
   List<String> get values => [
-    aSvg,
-    frame111,
     appleIcon,
     arrowDown,
     back,
+    caps,
     check,
+    clock,
     comments,
-    cppp,
     discountIcon,
     eventBarIcon,
     eyeOff,
@@ -111,13 +107,13 @@ class $AssetsIconsGen {
     love,
     menuBarIcon,
     mesage,
-    newwwwww,
     nextButton,
     notification,
     paymentIcon,
     squareLogo,
     superClub,
     userBarIcon,
+    video,
   ];
 }
 
@@ -149,6 +145,10 @@ class $AssetsImagesGen {
   AssetGenImage get onboarding3 =>
       const AssetGenImage('assets/images/onboarding3.png');
 
+  /// File path: assets/images/profile_img.png
+  AssetGenImage get profileImg =>
+      const AssetGenImage('assets/images/profile_img.png');
+
   /// File path: assets/images/reset_success.png
   AssetGenImage get resetSuccess =>
       const AssetGenImage('assets/images/reset_success.png');
@@ -159,6 +159,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/splash.png
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
 
+  /// File path: assets/images/start_icon.png
+  AssetGenImage get startIcon =>
+      const AssetGenImage('assets/images/start_icon.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
     avatar,
@@ -168,9 +172,11 @@ class $AssetsImagesGen {
     onboarding1,
     onboarding2,
     onboarding3,
+    profileImg,
     resetSuccess,
     s,
     splash,
+    startIcon,
   ];
 }
 
