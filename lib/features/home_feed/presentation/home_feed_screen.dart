@@ -106,7 +106,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
               itemBuilder: (_, index) {
                 final isFavorite = isFavoriteList.contains(index);
                 final isLike = isLikeList.contains(index);
-                return FoodCardWidget(
+                 return FoodCardWidget(
                   image: Assets.images.food.path,
                   foodName: 'Food Truck Friday',
                   foodStatus: 'Upcoming',
@@ -118,7 +118,9 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
                   isLike: isLike,
                   onFavoriteToggle: () => toogleUpdateFavorite(index),
                   onLikeToggle: () => toogleUpdateLike(index),
-                );
+                ); 
+
+                  
               },
             ),
           ],

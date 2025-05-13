@@ -1,6 +1,6 @@
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/features/event/event_screen.dart';
-import 'package:dawgonvegans/features/menu/menu_bar_screen.dart';
+import 'package:dawgonvegans/features/menu/presentation/menu_bar_screen.dart';
 import 'package:dawgonvegans/features/profile/profile_screen.dart';
 import 'package:dawgonvegans/gen/assets.gen.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';

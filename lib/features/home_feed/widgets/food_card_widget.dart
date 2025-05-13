@@ -100,24 +100,16 @@ class FoodCardWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12.r),
                     color: AppColors.cF5F5F5,
                   ),
-                  child:
-                      isFavorite
-                          ? SvgPicture.asset(
-                            Assets.icons.love,
-                            width: 25.w,
-                            height: 25.h,
-                            fit: BoxFit.none,
-                            colorFilter: ColorFilter.mode(
-                              AppColors.cFF0000,
-                              BlendMode.srcIn,
-                            ),
-                          )
-                          : SvgPicture.asset(
-                            Assets.icons.love,
-                            width: 25.w,
-                            height: 25.h,
-                            fit: BoxFit.none,
-                          ),
+                  child: SvgPicture.asset(
+                    Assets.icons.love,
+                    width: 25.w,
+                    height: 25.h,
+                    fit: BoxFit.none,
+                    colorFilter: ColorFilter.mode(
+                      isFavorite ? AppColors.cFF0000 : AppColors.c666666,
+                      BlendMode.srcIn,
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -144,24 +136,16 @@ class FoodCardWidget extends StatelessWidget {
                     // Likes
                     InkWell(
                       onTap: onLikeToggle,
-                      child:
-                          isLike
-                              ? SvgPicture.asset(
-                                Assets.icons.like,
-                                width: 15.w,
-                                height: 15.h,
-                                fit: BoxFit.none,
-                                colorFilter: ColorFilter.mode(
-                                  AppColors.c0000FF,
-                                  BlendMode.srcIn,
-                                ),
-                              )
-                              : SvgPicture.asset(
-                                Assets.icons.like,
-                                width: 15.w,
-                                height: 15.h,
-                                fit: BoxFit.none,
-                              ),
+                      child: SvgPicture.asset(
+                        Assets.icons.like,
+                        width: 15.w,
+                        height: 15.h,
+                        fit: BoxFit.none,
+                        colorFilter: ColorFilter.mode(
+                          isLike ? AppColors.c0000FF : AppColors.c666666,
+                          BlendMode.srcIn,
+                        ),
+                      ),
                     ),
 
                     Text(

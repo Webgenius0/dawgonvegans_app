@@ -12,6 +12,12 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/.svg
+  String get aSvg => 'assets/icons/.svg';
+
+  /// File path: assets/icons/Frame 111.svg
+  String get frame111 => 'assets/icons/Frame 111.svg';
+
   /// File path: assets/icons/apple_icon.svg
   String get appleIcon => 'assets/icons/apple_icon.svg';
 
@@ -26,6 +32,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/comments.svg
   String get comments => 'assets/icons/comments.svg';
+
+  /// File path: assets/icons/cppp.svg
+  String get cppp => 'assets/icons/cppp.svg';
 
   /// File path: assets/icons/event_bar_icon.svg
   String get eventBarIcon => 'assets/icons/event_bar_icon.svg';
@@ -77,11 +86,14 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<String> get values => [
+    aSvg,
+    frame111,
     appleIcon,
     arrowDown,
     back,
     check,
     comments,
+    cppp,
     eventBarIcon,
     eyeOff,
     eyeOn,
@@ -106,6 +118,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/avatar.png
   AssetGenImage get avatar => const AssetGenImage('assets/images/avatar.png');
+
+  /// File path: assets/images/capss.png
+  AssetGenImage get capss => const AssetGenImage('assets/images/capss.png');
 
   /// File path: assets/images/food.png
   AssetGenImage get food => const AssetGenImage('assets/images/food.png');
@@ -139,6 +154,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     avatar,
+    capss,
     food,
     noImageAvailable,
     onboarding1,
