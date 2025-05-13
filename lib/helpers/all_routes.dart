@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dawgonvegans/features/auth/login/login_screen.dart';
 import 'package:dawgonvegans/features/membership/presentation/membership_screen.dart';
+import 'package:dawgonvegans/features/notification/notification_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../features/auth/forget_password/forget_screen.dart';
@@ -23,6 +24,7 @@ final class Routes {
   static const String membershipScreen = '/membershipScreen';
   static const String paymentMethodScreen = '/paymentMethodScreen';
   static const String navigationScreen = '/navigationScreen';
+  static const String notificationScreen = '/notificationScreen';
 }
 
 final class RouteGenerator {
@@ -78,6 +80,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => NavigationScreen());
+      case Routes.notificationScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: NotificationScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => NotificationScreen());
 
       default:
         return null;

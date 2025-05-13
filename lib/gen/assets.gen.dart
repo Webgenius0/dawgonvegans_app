@@ -36,6 +36,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/cppp.svg
   String get cppp => 'assets/icons/cppp.svg';
 
+  /// File path: assets/icons/discount_icon.svg
+  String get discountIcon => 'assets/icons/discount_icon.svg';
+
   /// File path: assets/icons/event_bar_icon.svg
   String get eventBarIcon => 'assets/icons/event_bar_icon.svg';
 
@@ -66,6 +69,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/mesage.svg
   String get mesage => 'assets/icons/mesage.svg';
 
+  /// File path: assets/icons/newwwwww.svg
+  String get newwwwww => 'assets/icons/newwwwww.svg';
+
   /// File path: assets/icons/next_button.svg
   String get nextButton => 'assets/icons/next_button.svg';
 
@@ -94,6 +100,7 @@ class $AssetsIconsGen {
     check,
     comments,
     cppp,
+    discountIcon,
     eventBarIcon,
     eyeOff,
     eyeOn,
@@ -104,6 +111,7 @@ class $AssetsIconsGen {
     love,
     menuBarIcon,
     mesage,
+    newwwwww,
     nextButton,
     notification,
     paymentIcon,

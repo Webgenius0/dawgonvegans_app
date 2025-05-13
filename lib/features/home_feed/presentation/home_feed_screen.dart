@@ -1,5 +1,7 @@
 import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/helpers/all_routes.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -62,13 +64,18 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
             ),
             child: SvgPicture.asset(Assets.icons.mesage),
           ),
-          Container(
-            margin: EdgeInsets.only(right: 20.w),
-            decoration: BoxDecoration(
-              color: AppColors.cFFFFFF,
-              shape: BoxShape.circle,
+          InkWell(
+            onTap: () {
+              NavigationService.navigateTo(Routes.notificationScreen);
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 20.w),
+              decoration: BoxDecoration(
+                color: AppColors.cFFFFFF,
+                shape: BoxShape.circle,
+              ),
+              child: SvgPicture.asset(Assets.icons.notification),
             ),
-            child: SvgPicture.asset(Assets.icons.notification),
           ),
         ],
       ),
@@ -106,7 +113,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
               itemBuilder: (_, index) {
                 final isFavorite = isFavoriteList.contains(index);
                 final isLike = isLikeList.contains(index);
-                 return FoodCardWidget(
+                return FoodCardWidget(
                   image: Assets.images.food.path,
                   foodName: 'Food Truck Friday',
                   foodStatus: 'Upcoming',
@@ -118,9 +125,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
                   isLike: isLike,
                   onFavoriteToggle: () => toogleUpdateFavorite(index),
                   onLikeToggle: () => toogleUpdateLike(index),
-                ); 
-
-                  
+                );
               },
             ),
           ],
