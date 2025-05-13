@@ -12,11 +12,17 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/about_us.svg
+  String get aboutUs => 'assets/icons/about_us.svg';
+
   /// File path: assets/icons/apple_icon.svg
   String get appleIcon => 'assets/icons/apple_icon.svg';
 
   /// File path: assets/icons/arrow_down.svg
   String get arrowDown => 'assets/icons/arrow_down.svg';
+
+  /// File path: assets/icons/arrow_right.svg
+  String get arrowRight => 'assets/icons/arrow_right.svg';
 
   /// File path: assets/icons/back.svg
   String get back => 'assets/icons/back.svg';
@@ -48,11 +54,17 @@ class $AssetsIconsGen {
   /// File path: assets/icons/google_icon.svg
   String get googleIcon => 'assets/icons/google_icon.svg';
 
+  /// File path: assets/icons/helo_center.svg
+  String get heloCenter => 'assets/icons/helo_center.svg';
+
   /// File path: assets/icons/home_bar_icon.svg
   String get homeBarIcon => 'assets/icons/home_bar_icon.svg';
 
   /// File path: assets/icons/like.svg
   String get like => 'assets/icons/like.svg';
+
+  /// File path: assets/icons/log_out.svg
+  String get logOut => 'assets/icons/log_out.svg';
 
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
@@ -75,6 +87,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/payment_icon.svg
   String get paymentIcon => 'assets/icons/payment_icon.svg';
 
+  /// File path: assets/icons/privacy_policy.svg
+  String get privacyPolicy => 'assets/icons/privacy_policy.svg';
+
+  /// File path: assets/icons/profile_event.svg
+  String get profileEvent => 'assets/icons/profile_event.svg';
+
+  /// File path: assets/icons/profile_favorite.svg
+  String get profileFavorite => 'assets/icons/profile_favorite.svg';
+
+  /// File path: assets/icons/profile_notification.svg
+  String get profileNotification => 'assets/icons/profile_notification.svg';
+
   /// File path: assets/icons/square_logo.svg
   String get squareLogo => 'assets/icons/square_logo.svg';
 
@@ -89,8 +113,10 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<String> get values => [
+    aboutUs,
     appleIcon,
     arrowDown,
+    arrowRight,
     back,
     caps,
     check,
@@ -101,8 +127,10 @@ class $AssetsIconsGen {
     eyeOff,
     eyeOn,
     googleIcon,
+    heloCenter,
     homeBarIcon,
     like,
+    logOut,
     logo,
     love,
     menuBarIcon,
@@ -110,6 +138,10 @@ class $AssetsIconsGen {
     nextButton,
     notification,
     paymentIcon,
+    privacyPolicy,
+    profileEvent,
+    profileFavorite,
+    profileNotification,
     squareLogo,
     superClub,
     userBarIcon,
@@ -145,6 +177,9 @@ class $AssetsImagesGen {
   AssetGenImage get onboarding3 =>
       const AssetGenImage('assets/images/onboarding3.png');
 
+  /// File path: assets/images/photo.png
+  AssetGenImage get photo => const AssetGenImage('assets/images/photo.png');
+
   /// File path: assets/images/profile_img.png
   AssetGenImage get profileImg =>
       const AssetGenImage('assets/images/profile_img.png');
@@ -172,6 +207,7 @@ class $AssetsImagesGen {
     onboarding1,
     onboarding2,
     onboarding3,
+    photo,
     profileImg,
     resetSuccess,
     s,

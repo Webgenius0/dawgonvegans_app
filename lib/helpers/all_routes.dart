@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
+import '../features/edit_profile/edit_profile_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
 import '../navigation_screen.dart';
 
@@ -25,6 +26,7 @@ final class Routes {
   static const String paymentMethodScreen = '/paymentMethodScreen';
   static const String navigationScreen = '/navigationScreen';
   static const String notificationScreen = '/notificationScreen';
+  static const String editProfileScreen = '/editProfileScreen';
 }
 
 final class RouteGenerator {
@@ -87,6 +89,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => NotificationScreen());
+      case Routes.editProfileScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: EditProfileScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => EditProfileScreen());
 
       default:
         return null;
