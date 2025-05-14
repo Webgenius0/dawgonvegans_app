@@ -27,6 +27,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/back.svg
   String get back => 'assets/icons/back.svg';
 
+  /// File path: assets/icons/bold_arrow_down.svg
+  String get boldArrowDown => 'assets/icons/bold_arrow_down.svg';
+
+  /// File path: assets/icons/bold_arrow_up.svg
+  String get boldArrowUp => 'assets/icons/bold_arrow_up.svg';
+
   /// File path: assets/icons/camera.svg
   String get camera => 'assets/icons/camera.svg';
 
@@ -128,6 +134,8 @@ class $AssetsIconsGen {
     arrowDown,
     arrowRight,
     back,
+    boldArrowDown,
+    boldArrowUp,
     camera,
     caps,
     check,

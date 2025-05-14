@@ -9,6 +9,7 @@ import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
 import '../features/edit_profile/edit_profile_screen.dart';
+import '../features/help_center/presentation/help_center_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
 import '../features/profile_notification_setting/profile_notification_setting.dart';
 import '../navigation_screen.dart';
@@ -29,6 +30,7 @@ final class Routes {
   static const String notificationScreen = '/notificationScreen';
   static const String editProfileScreen = '/editProfileScreen';
   static const String profileNotificationSetting = '/profileNotificationSetting';
+  static const String helpCenterScreen = '/helpCenterScreen';
 }
 
 final class RouteGenerator {
@@ -105,6 +107,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => ProfileNotificationSetting());
+      case Routes.helpCenterScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: HelpCenterScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => HelpCenterScreen());
 
       default:
         return null;

@@ -162,7 +162,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ProfileTileWidget(
               icon: Assets.icons.heloCenter,
               titleName: 'Help Center',
-              onTap: () {},
+              onTap: () {
+                NavigationService.navigateTo(Routes.helpCenterScreen);
+              },
             ),
             ProfileTileWidget(
               icon: Assets.icons.aboutUs,

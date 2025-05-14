@@ -413,6 +413,30 @@ class TextFontStyle {
     color: AppColors.c00020A,
     fontWeight: FontWeight.w400,
   );
+  static final textStyle18cFE8204ManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 18.sp,
+    color: AppColors.cFE8204,
+    fontWeight: FontWeight.w600,
+  );
+  static final textStyle18c9E9E9EManropeW600 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 18.sp,
+    color: AppColors.c9E9E9E,
+    fontWeight: FontWeight.w600,
+  );
+  static final textStyle16c202531ManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 16.sp,
+    color: AppColors.c202531,
+    fontWeight: FontWeight.w500,
+  );
+  static final textStyle12c00020AManropeW400 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 12.sp,
+    color: AppColors.c00020A,
+    fontWeight: FontWeight.w400,
+  );
   static final textStyle20c333333ManropeW700 = TextStyle(
     fontFamily: 'manrope',
     fontSize: 20.sp,
@@ -478,31 +502,18 @@ class TextFontStyle {
     fontSize: 14.sp,
     color: AppColors.c212121,
     fontWeight: FontWeight.w500,
-
-
-    
   );
   static final textStyle18c00020AManropeW600 = TextStyle(
     fontFamily: 'manrope',
     fontSize: 18.sp,
     color: AppColors.c00020A,
     fontWeight: FontWeight.w600,
-
-
-
-
-    
   );
   static final textStyle14c606060ManropeW500 = TextStyle(
     fontFamily: 'manrope',
     fontSize: 14.sp,
     color: AppColors.c606060,
     fontWeight: FontWeight.w500,
-
-   
-
-
-    
   );
   static final textStyle12cFAFAFAUrbanistW500 = TextStyle(
     fontFamily: 'urbanist',
