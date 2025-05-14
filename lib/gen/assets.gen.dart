@@ -48,6 +48,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/comments.svg
   String get comments => 'assets/icons/comments.svg';
 
+  /// File path: assets/icons/contact_us_icon.svg
+  String get contactUsIcon => 'assets/icons/contact_us_icon.svg';
+
   /// File path: assets/icons/discount_icon.svg
   String get discountIcon => 'assets/icons/discount_icon.svg';
 
@@ -60,6 +63,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/eye_on.svg
   String get eyeOn => 'assets/icons/eye_on.svg';
 
+  /// File path: assets/icons/facebook_icon.svg
+  String get facebookIcon => 'assets/icons/facebook_icon.svg';
+
   /// File path: assets/icons/google_icon.svg
   String get googleIcon => 'assets/icons/google_icon.svg';
 
@@ -68,6 +74,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/home_bar_icon.svg
   String get homeBarIcon => 'assets/icons/home_bar_icon.svg';
+
+  /// File path: assets/icons/instra_icon.svg
+  String get instraIcon => 'assets/icons/instra_icon.svg';
 
   /// File path: assets/icons/like.svg
   String get like => 'assets/icons/like.svg';
@@ -127,6 +136,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/video.svg
   String get video => 'assets/icons/video.svg';
 
+  /// File path: assets/icons/whatsapp_icon.svg
+  String get whatsappIcon => 'assets/icons/whatsapp_icon.svg';
+
   /// List of all assets
   List<String> get values => [
     aboutUs,
@@ -141,13 +153,16 @@ class $AssetsIconsGen {
     check,
     clock,
     comments,
+    contactUsIcon,
     discountIcon,
     eventBarIcon,
     eyeOff,
     eyeOn,
+    facebookIcon,
     googleIcon,
     heloCenter,
     homeBarIcon,
+    instraIcon,
     like,
     logOut,
     logo,
@@ -167,6 +182,7 @@ class $AssetsIconsGen {
     superClub,
     userBarIcon,
     video,
+    whatsappIcon,
   ];
 }
 
