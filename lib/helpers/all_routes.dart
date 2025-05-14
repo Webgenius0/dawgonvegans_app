@@ -5,12 +5,14 @@ import 'package:dawgonvegans/features/membership/presentation/membership_screen.
 import 'package:dawgonvegans/features/notification/notification_screen.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../features/about_us/about_us_screen.dart';
 import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
 import '../features/edit_profile/edit_profile_screen.dart';
 import '../features/help_center/presentation/help_center_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
+import '../features/privacy_policy/privacy_policy_screen.dart';
 import '../features/profile_notification_setting/profile_notification_setting.dart';
 import '../navigation_screen.dart';
 
@@ -24,13 +26,15 @@ final class Routes {
   static const String registerScreen = '/registerScreen';
   static const String forgetPasswordScreen = '/forgetPasswordScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
-  static const String membershipScreen = '/membershipScreen';
+  static const String membershipScreen = '/membershipScreen'; 
   static const String paymentMethodScreen = '/paymentMethodScreen';
   static const String navigationScreen = '/navigationScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String editProfileScreen = '/editProfileScreen';
   static const String profileNotificationSetting = '/profileNotificationSetting';
   static const String helpCenterScreen = '/helpCenterScreen';
+  static const String aboutUsScreen = '/aboutUsScreen';
+  static const String privacyPolicyScreen = '/privacyPolicyScreen';
 }
 
 final class RouteGenerator {
@@ -114,6 +118,20 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => HelpCenterScreen());
+      case Routes.aboutUsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: AboutUsScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => AboutUsScreen());
+      case Routes.privacyPolicyScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: PrivacyPolicyScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => PrivacyPolicyScreen());
 
       default:
         return null;

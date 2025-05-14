@@ -169,12 +169,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ProfileTileWidget(
               icon: Assets.icons.aboutUs,
               titleName: 'About Us',
-              onTap: () {},
+              onTap: () {
+                  NavigationService.navigateTo(Routes.aboutUsScreen);
+              },
             ),
             ProfileTileWidget(
               icon: Assets.icons.privacyPolicy,
               titleName: 'Privacy Policy',
-              onTap: () {},
+              onTap: () {
+                NavigationService.navigateTo(Routes.privacyPolicyScreen);
+              },
             ),
             ProfileTileWidget(
               icon: Assets.icons.logOut,
