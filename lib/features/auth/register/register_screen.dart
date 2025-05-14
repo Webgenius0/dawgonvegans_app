@@ -42,7 +42,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cFFF8F3,
-      appBar: CustomAppBar(),
+      // appBar: CustomAppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 30.h),
         child: Form(
@@ -50,6 +50,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              UIHelper.verticalSpace(40.h),
               // Body Text
               CustomBodyTextWidget(
                 titleText: 'Create your new account',
@@ -157,28 +158,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: Text.rich(
                       TextSpan(
                         text: 'I Agree with ',
-                        style: TextFontStyle.textStyle14c0F0F0FManropeW500.copyWith(
-                          fontSize: 13.sp,
-                          color: Colors.black87
-                        ),
+                        style: TextFontStyle.textStyle14c0F0F0FManropeW500
+                            .copyWith(fontSize: 13.sp, color: Colors.black87),
                         children: <TextSpan>[
                           TextSpan(
                             text: 'Terms of Service ',
-                            style: TextFontStyle.textStyle14cFE8C00ManropeW600.copyWith(
-                          fontSize: 13.sp
-                        ),
+                            style: TextFontStyle.textStyle14cFE8C00ManropeW600
+                                .copyWith(fontSize: 13.sp),
                           ),
                           TextSpan(
                             text: 'and ',
-                            style: TextFontStyle.textStyle14c0F0F0FManropeW500.copyWith(
-                          fontSize: 13.sp
-                        ),
+                            style: TextFontStyle.textStyle14c0F0F0FManropeW500
+                                .copyWith(fontSize: 13.sp),
                           ),
                           TextSpan(
                             text: 'Privacy Policy',
-                            style: TextFontStyle.textStyle14cFE8C00ManropeW600.copyWith(
-                          fontSize: 13.sp
-                        ),
+                            style: TextFontStyle.textStyle14cFE8C00ManropeW600
+                                .copyWith(fontSize: 13.sp),
                           ),
                         ],
                       ),
@@ -193,8 +189,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 side: BorderSide.none,
                 buttonName: 'Register',
                 onPressed: () {
-                 // if (_formKey.currentState!.validate()) {}
-                 NavigationService.navigateTo(Routes.membershipScreen);
+                  // if (_formKey.currentState!.validate()) {}
+                  NavigationService.navigateTo(Routes.membershipScreen);
                 },
               ),
 
@@ -221,9 +217,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         recognizer:
                             TapGestureRecognizer()
                               ..onTap = () {
-
-                                NavigationService.navigateTo(Routes.loginScreen);
-                            
+                                NavigationService.navigateToUntilReplacement(
+                                  Routes.loginScreen,
+                                );
                               },
                       ),
                     ],

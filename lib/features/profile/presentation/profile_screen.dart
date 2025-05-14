@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/features/profile/widgets/log_out_alert.dart';
 import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
@@ -182,12 +185,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             ProfileTileWidget(
               icon: Assets.icons.logOut,
-              titleName: 'Logout',
+              titleName: 'Logout', 
               isIcon: false,
               textStyle: TextFontStyle.textStyle18c00020AManropeW500.copyWith(
                 color: Colors.red,
               ),
-              onTap: () {},
+              onTap: () async {
+
+                showLogoutDialog(context);
+
+
+
+              },
             ),
           ],
         ),

@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
-import '../../../common_widgets/custom_appbar.dart';
 import '../../../common_widgets/custom_body_text_widget.dart';
 import '../../../common_widgets/custom_button.dart';
 import '../../../common_widgets/custom_horizontal_widget.dart';
@@ -35,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cFFF8F3,
-      appBar: CustomAppBar(),
+      //  appBar: CustomAppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 30.h),
         child: Form(
@@ -43,9 +42,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              UIHelper.verticalSpace(40.h),
+
               // Body Text
               CustomBodyTextWidget(
-                titleText: 'Login to your account',
+                titleText: 'Login to Your Account',
                 subTitleText: 'Please sign in to your account ',
               ),
 
@@ -146,7 +147,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         recognizer:
                             TapGestureRecognizer()
                               ..onTap = () {
-                                    NavigationService.navigateTo(Routes.registerScreen);
+                                NavigationService.navigateToUntilReplacement(
+                                  Routes.registerScreen,
+                                );
                               },
                       ),
                     ],

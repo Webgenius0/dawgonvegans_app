@@ -84,6 +84,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/log_out.svg
   String get logOut => 'assets/icons/log_out.svg';
 
+  /// File path: assets/icons/log_out_cross.svg
+  String get logOutCross => 'assets/icons/log_out_cross.svg';
+
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
 
@@ -165,6 +168,7 @@ class $AssetsIconsGen {
     instraIcon,
     like,
     logOut,
+    logOutCross,
     logo,
     love,
     menuBarIcon,
