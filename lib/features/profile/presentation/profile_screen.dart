@@ -4,6 +4,7 @@ import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../common_widgets/custom_appbar.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
@@ -129,7 +130,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ProfileTileWidget(
               icon: Assets.icons.notification,
               titleName: 'Notification',
-              onTap: () {},
+              onTap: () {
+                NavigationService.navigateTo(Routes.profileNotificationSetting);
+              },
             ),
             ProfileTileWidget(
               icon: Assets.icons.eventBarIcon,

@@ -10,6 +10,7 @@ import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
 import '../features/edit_profile/edit_profile_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
+import '../features/profile_notification_setting/profile_notification_setting.dart';
 import '../navigation_screen.dart';
 
 final class Routes {
@@ -27,6 +28,7 @@ final class Routes {
   static const String navigationScreen = '/navigationScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String editProfileScreen = '/editProfileScreen';
+  static const String profileNotificationSetting = '/profileNotificationSetting';
 }
 
 final class RouteGenerator {
@@ -96,6 +98,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => EditProfileScreen());
+      case Routes.profileNotificationSetting:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: ProfileNotificationSetting(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => ProfileNotificationSetting());
 
       default:
         return null;

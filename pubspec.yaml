@@ -36,6 +36,7 @@ dependencies:
   flashy_tab_bar2: ^0.0.10
   flutter:
     sdk: flutter
+  flutter_advanced_switch: ^3.1.0
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.1.0
   get: ^4.7.2
