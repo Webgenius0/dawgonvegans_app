@@ -10,11 +10,15 @@ class ProfileTileWidget extends StatelessWidget {
   final String icon;
   final String titleName;
   final VoidCallback onTap;
+  final TextStyle? textStyle;
+  final bool isIcon;
   const ProfileTileWidget({
     super.key,
     required this.icon,
     required this.titleName,
     required this.onTap,
+    this.textStyle,
+    this.isIcon = true
   });
 
   @override
@@ -22,19 +26,20 @@ class ProfileTileWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.only( top: 25.h),
+        padding: EdgeInsets.only( bottom: 25.h),
         child: Row(
           children: [
             SvgPicture.asset(icon, width: 25.w, height: 25.h, fit: BoxFit.none),
             UIHelper.horizontalSpace(20.w),
-            Text(titleName, style: TextFontStyle.textStyle18c00020AManropeW500),
+            Text(titleName, style: textStyle ?? TextFontStyle.textStyle18c00020AManropeW500),
             Spacer(),
-            SvgPicture.asset(
+          
+          isIcon ?  SvgPicture.asset(
               Assets.icons.arrowRight,
               width: 25.w,
               height: 25.h,
               fit: BoxFit.none,
-            ),
+            ) : SizedBox.shrink(),
           ],
         ),
       ),

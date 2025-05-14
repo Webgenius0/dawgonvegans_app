@@ -15,4 +15,7 @@ class FontFamily {
 
   /// Font family: manrope
   static const String manrope = 'manrope';
+
+  /// Font family: urbanist
+  static const String urbanist = 'urbanist';
 }

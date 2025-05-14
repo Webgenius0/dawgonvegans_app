@@ -467,6 +467,38 @@ class TextFontStyle {
     color: AppColors.c00020A,
     fontWeight: FontWeight.w500,
   );
+  static final textStyle20cFFFFFFUrbanistW700 = TextStyle(
+    fontFamily: 'urbanist',
+    fontSize: 20.sp,
+    color: AppColors.cFFFFFF,
+    fontWeight: FontWeight.w700,
+  );
+  static final textStyle14c212121ManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c212121,
+    fontWeight: FontWeight.w500,
+
+
+    
+  );
+  static final textStyle14c606060ManropeW500 = TextStyle(
+    fontFamily: 'manrope',
+    fontSize: 14.sp,
+    color: AppColors.c606060,
+    fontWeight: FontWeight.w500,
+
+   
+
+
+    
+  );
+  static final textStyle12cFAFAFAUrbanistW500 = TextStyle(
+    fontFamily: 'urbanist',
+    fontSize: 12.sp,
+    color: AppColors.cFAFAFA,
+    fontWeight: FontWeight.w500,
+  );
 
   static final textStyle16c101820NunitoSansw800 = TextStyle(
     fontFamily: 'NunitoSans',

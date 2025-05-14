@@ -25,7 +25,7 @@ class _MenuBarScreenState extends State<MenuBarScreen> {
     });
   }
 
-  final List<String> _itemsList = ['New', 'Mains', 'Sides', 'Drinks'];
+  final List<String> itemsList = ['New', 'Mains', 'Sides', 'Drinks'];
 
   int index = 0;
 

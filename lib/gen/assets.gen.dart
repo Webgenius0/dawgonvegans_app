@@ -96,6 +96,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/profile_favorite.svg
   String get profileFavorite => 'assets/icons/profile_favorite.svg';
 
+  /// File path: assets/icons/profile_membership_icon.svg
+  String get profileMembershipIcon =>
+      'assets/icons/profile_membership_icon.svg';
+
   /// File path: assets/icons/profile_notification.svg
   String get profileNotification => 'assets/icons/profile_notification.svg';
 
@@ -141,6 +145,7 @@ class $AssetsIconsGen {
     privacyPolicy,
     profileEvent,
     profileFavorite,
+    profileMembershipIcon,
     profileNotification,
     squareLogo,
     superClub,

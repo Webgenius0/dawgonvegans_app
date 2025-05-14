@@ -129,10 +129,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       toogleCheckedUpdated();
                     },
                     child: Container(
-                      width: 25.w,
-                      height: 25.h,
+                      width: 20.w,
+                      height: 20.h,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.r),
+                        borderRadius: BorderRadius.circular(6.r),
                         shape: BoxShape.rectangle,
                         border: Border.all(
                           color:
@@ -147,7 +147,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ? Icon(
                                 Icons.check,
                                 color: AppColors.cFFFFFF,
-                                size: 20.sp,
+                                size: 15.sp,
                               )
                               : null,
                     ),
@@ -157,19 +157,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: Text.rich(
                       TextSpan(
                         text: 'I Agree with ',
-                        style: TextFontStyle.textStyle14c0F0F0FManropeW500,
+                        style: TextFontStyle.textStyle14c0F0F0FManropeW500.copyWith(
+                          fontSize: 13.sp,
+                          color: Colors.black87
+                        ),
                         children: <TextSpan>[
                           TextSpan(
                             text: 'Terms of Service ',
-                            style: TextFontStyle.textStyle14cFE8C00ManropeW600,
+                            style: TextFontStyle.textStyle14cFE8C00ManropeW600.copyWith(
+                          fontSize: 13.sp
+                        ),
                           ),
                           TextSpan(
                             text: 'and ',
-                            style: TextFontStyle.textStyle14c0F0F0FManropeW500,
+                            style: TextFontStyle.textStyle14c0F0F0FManropeW500.copyWith(
+                          fontSize: 13.sp
+                        ),
                           ),
                           TextSpan(
                             text: 'Privacy Policy',
-                            style: TextFontStyle.textStyle14cFE8C00ManropeW600,
+                            style: TextFontStyle.textStyle14cFE8C00ManropeW600.copyWith(
+                          fontSize: 13.sp
+                        ),
                           ),
                         ],
                       ),
