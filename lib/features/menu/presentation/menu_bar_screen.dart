@@ -32,13 +32,10 @@ class _MenuBarScreenState extends State<MenuBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
-          
           children: [
-
             UIHelper.verticalSpace(50.h),
             // MenuBar Card Widget is here
             MenuBarCardWidget(
@@ -48,7 +45,7 @@ class _MenuBarScreenState extends State<MenuBarScreen> {
               image: Assets.images.capss.path,
             ),
 
-         /*    MaterialButton(onPressed: (){
+            /*    MaterialButton(onPressed: (){
               showCustomDialog(
                 context: context,
                 icon: Assets.icons.cppp,

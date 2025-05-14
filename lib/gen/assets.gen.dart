@@ -27,6 +27,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/back.svg
   String get back => 'assets/icons/back.svg';
 
+  /// File path: assets/icons/camera.svg
+  String get camera => 'assets/icons/camera.svg';
+
   /// File path: assets/icons/caps.svg
   String get caps => 'assets/icons/caps.svg';
 
@@ -90,6 +93,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/privacy_policy.svg
   String get privacyPolicy => 'assets/icons/privacy_policy.svg';
 
+  /// File path: assets/icons/profile_arrow_down.svg
+  String get profileArrowDown => 'assets/icons/profile_arrow_down.svg';
+
   /// File path: assets/icons/profile_event.svg
   String get profileEvent => 'assets/icons/profile_event.svg';
 
@@ -122,6 +128,7 @@ class $AssetsIconsGen {
     arrowDown,
     arrowRight,
     back,
+    camera,
     caps,
     check,
     clock,
@@ -143,6 +150,7 @@ class $AssetsIconsGen {
     notification,
     paymentIcon,
     privacyPolicy,
+    profileArrowDown,
     profileEvent,
     profileFavorite,
     profileMembershipIcon,

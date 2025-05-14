@@ -48,12 +48,17 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        leading: Container(
-          decoration: BoxDecoration(
-            color: AppColors.cFFFFFF,
-            shape: BoxShape.circle,
+        leading: InkWell(
+          onTap: (){
+            NavigationService.navigateTo(Routes.editProfileScreen);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              color: AppColors.cFFFFFF,
+              shape: BoxShape.circle,
+            ),
+            child: Image.asset(Assets.images.avatar.path),
           ),
-          child: Image.asset(Assets.images.avatar.path),
         ),
         actions: [
           Container(

@@ -1,12 +1,13 @@
 import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../common_widgets/custom_appbar.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
+import '../../../helpers/all_routes.dart';
 import '../widgets/profile_card_widget.dart';
 import '../widgets/profile_tile_widget.dart';
 
@@ -34,7 +35,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               email: 'hello@designpicko.com',
               name: ' Design Picko',
               profilePhoto: Assets.images.profileImg.path,
-              onTap: () {},
+              onTap: () {
+                NavigationService.navigateTo(Routes.editProfileScreen);
+              },
             ),
 
             UIHelper.verticalSpace(30.h),
