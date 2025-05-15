@@ -25,11 +25,8 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-
-    final provider = Provider.of<EditProfileProvider>(context);
     return Scaffold(
       appBar: CustomAppBar(text: 'Profile', leading: SizedBox.shrink()),
-
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
@@ -38,23 +35,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             // ProfileCardWidget for Profile Photo
             Consumer<EditProfileProvider>(
-              
               builder: (context, provider, child) {
                 return ProfileCardWidget(
                   email: 'hello@designpicko.com',
                   name: ' Design Picko',
-                  profilePhoto:Assets.images.profileImg.path,
-                
+                  profilePhoto: Assets.images.profileImg.path,
 
-
-                  
-                  
-               
                   onTap: () {
                     NavigationService.navigateTo(Routes.editProfileScreen);
                   },
                 );
-              }
+              },
             ),
 
             UIHelper.verticalSpace(30.h),
@@ -186,7 +177,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               icon: Assets.icons.aboutUs,
               titleName: 'About Us',
               onTap: () {
-                  NavigationService.navigateTo(Routes.aboutUsScreen);
+                NavigationService.navigateTo(Routes.aboutUsScreen);
               },
             ),
             ProfileTileWidget(
@@ -198,17 +189,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             ProfileTileWidget(
               icon: Assets.icons.logOut,
-              titleName: 'Logout', 
+              titleName: 'Logout',
               isIcon: false,
               textStyle: TextFontStyle.textStyle18c00020AManropeW500.copyWith(
                 color: Colors.red,
               ),
               onTap: () async {
-
                 showLogoutDialog(context);
-
-
-
               },
             ),
           ],

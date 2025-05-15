@@ -1,9 +1,10 @@
 import 'package:dawgonvegans/gen/assets.gen.dart';
-import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/menu_bar_card_widget.dart';
+import '../widgets/menu_bar_membership_card_widget.dart';
+import '../widgets/new_menu_bar_widget.dart';
+import '../widgets/silber_tab.dart';
 
 class MenuBarScreen extends StatefulWidget {
   const MenuBarScreen({super.key});
@@ -12,10 +13,18 @@ class MenuBarScreen extends StatefulWidget {
   State<MenuBarScreen> createState() => _MenuBarScreenState();
 }
 
-class _MenuBarScreenState extends State<MenuBarScreen> {
+class _MenuBarScreenState extends State<MenuBarScreen>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
   Set<int> isFavoriteList = {};
 
-  void toogleUpdateFavorite(int index) {
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+
+  void toggleUpdateFavorite(int index) {
     setState(() {
       if (isFavoriteList.contains(index)) {
         isFavoriteList.remove(index);
@@ -25,75 +34,69 @@ class _MenuBarScreenState extends State<MenuBarScreen> {
     });
   }
 
-  final List<String> itemsList = ['New', 'Mains', 'Sides', 'Drinks'];
-
-  int index = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
-          children: [
-            UIHelper.verticalSpace(50.h),
-            // MenuBar Card Widget is here
-            MenuBarCardWidget(
-              title: "Dawn'On Member",
-              subtitle:
-                  "You're seeing this menu 24 hours before everyone else!",
-              image: Assets.images.capss.path,
-            ),
-
-            /*    MaterialButton(onPressed: (){
-              showCustomDialog(
-                context: context,
-                icon: Assets.icons.cppp,
-
-                 onPressed: () {
-
-
-                });
-            }, child: Text('Click here'),), */
-          ],
+      body: NestedScrollView(
+        headerSliverBuilder:
+            (context, innerBoxScrolled) => [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 50.h),
+                      MenuBarMembershipCardWidget(
+                        title: "Dawn'On Member",
+                        subtitle:
+                            "You're seeing this menu 24 hours before everyone else!",
+                        image: Assets.images.capss.path,
+                      ),
+                      SizedBox(height: 20.h),
+                    ],
+                  ),
+                ),
+              ),
+              SliverPersistentHeader(
+                pinned: true,
+                delegate: SliverTabBarDelegate(
+                  TabBar(
+                    controller: _tabController,
+                    labelColor: Colors.black,
+                    unselectedLabelColor: Colors.grey,
+                    indicatorColor: Colors.black,
+                    tabs: const [
+                      Tab(text: 'New'),
+                      Tab(text: 'Mains'),
+                      Tab(text: 'Sides'),
+                      Tab(text: 'Drinks'),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+        body: TabBarView(
+          controller: _tabController,
+          children: List.generate(4, (tabIndex) {
+            return ListView.builder(
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+              itemCount: 10,
+              itemBuilder:
+                  (context, index) => NewMenuBarWidget(
+                    image: Assets.images.food.path,
+                    foodName: 'Food Truck Friday',
+                    foodDiscount: '10% Off',
+                    foodDescription: 'Warm up with our new seasonal specials',
+                    foodAmount: '\$50.55',
+                    foodLeaveAmount: '\$60.55',
+                    isFavorite: isFavoriteList.contains(index),
+                    onFavoriteToggle: () => toggleUpdateFavorite(index),
+                  ),
+            );
+          }),
         ),
       ),
-
-      /* ListView.builder(
-        shrinkWrap: true,
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemCount: _itemsList.length,
-        itemBuilder:
-            (_, index) => InkWell(
-              onTap: () {},
-              child: Container(
-                /*  decoration: BoxDecoration(
-              color: AppColors.cFFFFFF,
-                        ), */
-                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 8.h),
-
-                child: Text(_itemsList[index]),
-              ),
-            ),
-      ), */
     );
   }
 }
-
-
-
-
-/*  return NewMenuBarWidget(
-                  image: Assets.images.food.path, 
-                  foodName: 'Food Truck Friday',
-                  foodDiscount: '10% Off',
-                  foodDescription: 'Warm up with our new seasonal specials',
-                foodAmount: '\$50.55',
-               foodLeaveAmount:  '\$60.55',
-                
-                  isFavorite: isFavorite,
-                 
-                  onFavoriteToggle: () => toogleUpdateFavorite(index),
-               
-                );  */

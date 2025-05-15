@@ -9,6 +9,7 @@ import '../features/about_us/about_us_screen.dart';
 import '../features/auth/forget_password/forget_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
+import '../features/community_chat/presentation/community_chat_screen.dart';
 import '../features/edit_profile/edit_profile_screen.dart';
 import '../features/help_center/presentation/help_center_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
@@ -35,6 +36,7 @@ final class Routes {
   static const String helpCenterScreen = '/helpCenterScreen';
   static const String aboutUsScreen = '/aboutUsScreen';
   static const String privacyPolicyScreen = '/privacyPolicyScreen';
+  static const String communityChatScreen = '/communityChatScreen';
 }
 
 final class RouteGenerator {
@@ -132,6 +134,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => PrivacyPolicyScreen());
+      case Routes.communityChatScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: CommunityChatScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => CommunityChatScreen());
 
       default:
         return null;

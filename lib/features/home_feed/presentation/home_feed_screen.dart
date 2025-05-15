@@ -49,7 +49,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
     return Scaffold(
       appBar: CustomAppBar(
         leading: InkWell(
-          onTap: (){
+          onTap: () {
             NavigationService.navigateTo(Routes.editProfileScreen);
           },
           child: Container(
@@ -61,13 +61,18 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
           ),
         ),
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 10.w),
-            decoration: BoxDecoration(
-              color: AppColors.cFFFFFF,
-              shape: BoxShape.circle,
+          InkWell(
+            onTap: () {
+              NavigationService.navigateTo(Routes.communityChatScreen);
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 10.w),
+              decoration: BoxDecoration(
+                color: AppColors.cFFFFFF,
+                shape: BoxShape.circle,
+              ),
+              child: SvgPicture.asset(Assets.icons.mesage),
             ),
-            child: SvgPicture.asset(Assets.icons.mesage),
           ),
           InkWell(
             onTap: () {

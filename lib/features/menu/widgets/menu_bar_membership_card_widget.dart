@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../constants/text_font_style.dart';
 import '../../../gen/colors.gen.dart';
 
-class MenuBarCardWidget extends StatelessWidget {
+class MenuBarMembershipCardWidget extends StatelessWidget {
   final String image;
   final String title;
   final String subtitle;
-  const MenuBarCardWidget({
+  const MenuBarMembershipCardWidget({
     super.key,
     required this.title,
     required this.subtitle,

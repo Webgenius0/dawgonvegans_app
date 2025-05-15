@@ -14,6 +14,7 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final TextStyle? textStyle;
   final EdgeInsetsGeometry? padding;
+  final Widget? child;
   const CustomButton({
     required this.buttonName,
     required this.onPressed,
@@ -24,6 +25,7 @@ class CustomButton extends StatelessWidget {
     this.textStyle,
     this.padding,
     this.side,
+    this.child,
     super.key,
   });
 
@@ -40,7 +42,7 @@ class CustomButton extends StatelessWidget {
       color: color ?? AppColors.cFE8204,
       minWidth: width ?? 1.sw,
       height: height ?? 50.h,
-      child: Text(
+      child: child ??  Text(
         buttonName,
         style: textStyle ?? TextFontStyle.textStyle14cFFFFFFManropeW600,
       ),

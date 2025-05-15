@@ -15,6 +15,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/about_us.svg
   String get aboutUs => 'assets/icons/about_us.svg';
 
+  /// File path: assets/icons/add_icon.svg
+  String get addIcon => 'assets/icons/add_icon.svg';
+
   /// File path: assets/icons/apple_icon.svg
   String get appleIcon => 'assets/icons/apple_icon.svg';
 
@@ -99,6 +102,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/mesage.svg
   String get mesage => 'assets/icons/mesage.svg';
 
+  /// File path: assets/icons/minus_icon.svg
+  String get minusIcon => 'assets/icons/minus_icon.svg';
+
   /// File path: assets/icons/next_button.svg
   String get nextButton => 'assets/icons/next_button.svg';
 
@@ -133,6 +139,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/square_logo.svg
   String get squareLogo => 'assets/icons/square_logo.svg';
 
+  /// File path: assets/icons/star.svg
+  String get star => 'assets/icons/star.svg';
+
   /// File path: assets/icons/super_club.svg
   String get superClub => 'assets/icons/super_club.svg';
 
@@ -148,6 +157,7 @@ class $AssetsIconsGen {
   /// List of all assets
   List<String> get values => [
     aboutUs,
+    addIcon,
     appleIcon,
     arrowDown,
     arrowRight,
@@ -176,6 +186,7 @@ class $AssetsIconsGen {
     love,
     menuBarIcon,
     mesage,
+    minusIcon,
     nextButton,
     notification,
     paymentIcon,
@@ -187,6 +198,7 @@ class $AssetsIconsGen {
     profileNotification,
     progressButton,
     squareLogo,
+    star,
     superClub,
     userBarIcon,
     video,
@@ -205,6 +217,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/food.png
   AssetGenImage get food => const AssetGenImage('assets/images/food.png');
+
+  /// File path: assets/images/food_img.png
+  AssetGenImage get foodImg =>
+      const AssetGenImage('assets/images/food_img.png');
 
   /// File path: assets/images/no_image_available.png
   AssetGenImage get noImageAvailable =>
@@ -248,6 +264,7 @@ class $AssetsImagesGen {
     avatar,
     capss,
     food,
+    foodImg,
     noImageAvailable,
     onboarding1,
     onboarding2,
