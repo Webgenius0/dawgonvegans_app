@@ -1,4 +1,5 @@
 import 'package:auto_animated/auto_animated.dart';
+import 'package:dawgonvegans/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -91,7 +92,7 @@ class UtillScreenMobile extends StatelessWidget {
 
             onGenerateRoute: RouteGenerator.generateRoute,
 
-            home: ProductDetailsScreen(),
+            home: Loading(),
           ),
         );
       },

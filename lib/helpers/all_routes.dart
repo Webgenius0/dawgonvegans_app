@@ -14,6 +14,7 @@ import '../features/edit_profile/edit_profile_screen.dart';
 import '../features/help_center/presentation/help_center_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
 import '../features/privacy_policy/privacy_policy_screen.dart';
+import '../features/product_details/presentation/product_details_screen.dart';
 import '../features/profile_notification_setting/profile_notification_setting.dart';
 import '../navigation_screen.dart';
 
@@ -37,6 +38,7 @@ final class Routes {
   static const String aboutUsScreen = '/aboutUsScreen';
   static const String privacyPolicyScreen = '/privacyPolicyScreen';
   static const String communityChatScreen = '/communityChatScreen';
+  static const String productDetailsScreen = '/productDetailsScreen';
 }
 
 final class RouteGenerator {
@@ -141,6 +143,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => CommunityChatScreen());
+      case Routes.productDetailsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: ProductDetailsScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => ProductDetailsScreen());
 
       default:
         return null;

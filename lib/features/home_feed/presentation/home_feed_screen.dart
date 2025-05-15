@@ -123,18 +123,23 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
               itemBuilder: (_, index) {
                 final isFavorite = isFavoriteList.contains(index);
                 final isLike = isLikeList.contains(index);
-                return FoodCardWidget(
-                  image: Assets.images.food.path,
-                  foodName: 'Food Truck Friday',
-                  foodStatus: 'Upcoming',
-                  foodDescription: 'Warm up with our new seasonal specials',
-                  totalLikes: '234 likes',
-                  totalComments: '45 comments',
-                  times: '2 hours ago',
-                  isFavorite: isFavorite,
-                  isLike: isLike,
-                  onFavoriteToggle: () => toogleUpdateFavorite(index),
-                  onLikeToggle: () => toogleUpdateLike(index),
+                return InkWell(
+                  onTap: (){
+                    NavigationService.navigateTo(Routes.productDetailsScreen);
+                  },
+                  child: FoodCardWidget(
+                    image: Assets.images.food.path,
+                    foodName: 'Food Truck Friday',
+                    foodStatus: 'Upcoming',
+                    foodDescription: 'Warm up with our new seasonal specials',
+                    totalLikes: '234 likes',
+                    totalComments: '45 comments',
+                    times: '2 hours ago',
+                    isFavorite: isFavorite,
+                    isLike: isLike,
+                    onFavoriteToggle: () => toogleUpdateFavorite(index),
+                    onLikeToggle: () => toogleUpdateLike(index),
+                  ),
                 );
               },
             ),

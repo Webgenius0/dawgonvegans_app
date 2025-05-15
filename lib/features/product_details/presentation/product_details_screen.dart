@@ -31,21 +31,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       backgroundColor: Colors.red,
       body: Stack(
         children: [
-          /*    Center(
-            child: SmoothPageIndicator(
-              controller: PageController(initialPage: _currentIndex),
-              count: _imageList.length,
-              effect: ExpandingDotsEffect(
-                dotHeight: 8.h,
-                dotWidth: 8.w,s
-                dotColor: Colors.white,
-                activeDotColor: AppColors.cFE8204,
-              ),
-              onDotClicked: (index) {
-                _carouselController.animateToPage(index);
-              },
-            ),
-          ), */
+        
           // Carousel
           CarouselSlider.builder(
             itemCount: _imageList.length,
