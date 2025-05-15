@@ -1,8 +1,7 @@
-import 'package:dawgonvegans/features/auth/login/login_screen.dart';
+import 'package:dawgonvegans/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'constants/app_constants.dart';
-
 import 'helpers/di.dart';
 import 'helpers/helper_methods.dart';
 import 'networks/dio/dio.dart';
@@ -43,7 +42,7 @@ class _LoadingState extends State<Loading> {
     if (_isLoading) {
       return const SplashScreen();
     } else {
-      return LoginScreen();
+      return OnboardingScreen();
     }
   }
 }

@@ -1,110 +1,119 @@
-/* import 'package:flutter/material.dart';
+import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/gen/assets.gen.dart';
+import 'package:dawgonvegans/helpers/all_routes.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../../gen/colors.gen.dart';
-import '../../../../../helpers/ui_helpers.dart';
+import '../../../gen/colors.gen.dart';
+import '../models/onboarding_model.dart';
 
-class OnboardCardWidget extends StatefulWidget {
-  const OnboardCardWidget({super.key});
+class OnboardCardWidget extends StatelessWidget {
+  final String title;
+  final String subttile;
+  final List<OnboardingModel> onBoardingList;
+  final PageController controller;
+  final int index;
+  const OnboardCardWidget({
+    super.key,
+    required this.subttile,
+    required this.title,
+    required this.onBoardingList,
+    required this.controller,
+    required this.index,
+  });
 
-  @override
-  State<OnboardCardWidget> createState() => _OnboardCardWidgetState();
-}
-
-class _OnboardCardWidgetState extends State<OnboardCardWidget> {
-
-   final CarouselSliderController _carouselController =
-      CarouselSliderController();
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Center(
-          child: Container(
-            width: 1.sw,
-
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20.r),
-              color: AppColors.cFFFFFF,
-            ),
-            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-            margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-            child: Column(
-              spacing: 20.h,
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Welcome to Dawnon Vegans!'),
-
-                Text('Inspiring a delicious plant-based lifestyle and a vibrant vegan community.'),
-
-                   CarouselSlider.builder(
-            itemCount: widget.onboardImageList.length,
-            carouselController: _carouselController,
-            itemBuilder: (_, itemIndex, pageViewIndex) {
-              final onboardImageItem = widget.onboardImageList[itemIndex];
-
-              /* return Container(
-                width: 1.sw,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.r),
-                  image: DecorationImage(
-                    image: AssetImage(onboardImageItem.toString()),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ); */
-
-              //Network Image
-              return ClipRRect(
-                borderRadius: BorderRadius.circular(20.r),
-                child: CustomCachedNetworkImage(
-                  imageUrl: onboardImageItem,
-                  width: 1.sw,
-                ),
-              );
-            },
-            options: CarouselOptions(
-              height: 200.h,
-              autoPlay: true,
-              viewportFraction: 1,
-              autoPlayInterval: Duration(seconds: 3),
-              enlargeCenterPage: true,
-              onPageChanged: (index, reason) {
-                setState(() {
-                  _currentIndex = index;
-                });
-              },
-              scrollDirection: Axis.horizontal,
-            ),
-          ),
-
-          UIHelper.verticalSpace(20.h),
-          Center(
-            child: SmoothPageIndicator(
-              controller: PageController(initialPage: _currentIndex),
-              count: widget.onboardImageList.length,
-              effect: WormEffect(
-                dotHeight: 8.h,
-                dotWidth: 8.w,
-                activeDotColor: AppColors.cF1C400,
-              ),
-              onDotClicked: (index) {
-                _carouselController.animateToPage(index);
-              },
-            ),
-          ),
-                
-                
-                
-                
-                ],
-            ),
-          ),
+    return Container(
+      width: 1.sw,
+      margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+      decoration: ShapeDecoration(
+        color: Color(0xFF784F2E),
+        shape: RoundedRectangleBorder(
+          side: BorderSide(width: 1.w, color: Colors.white),
+          borderRadius: BorderRadius.circular(24.r),
         ),
+      ),
+
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        spacing: 15.h,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          // Title Text
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: TextFontStyle.textStyle32cFFFFFFManropeW600,
+          ),
+
+          // Subtile
+          Text(
+            subttile,
+            textAlign: TextAlign.center,
+            style: TextFontStyle.textStyle14cFFFFFFManropeW400,
+          ),
+
+          // Page Indicator
+          SmoothPageIndicator(
+            controller: controller,
+            count: onBoardingList.length,
+            effect: ExpandingDotsEffect(
+              dotHeight: 8.h,
+              dotWidth: 8.w,
+              activeDotColor: AppColors.cFFFFFF,
+            ),
+          ),
+
+          index == onBoardingList.length - 1
+              ? InkWell(
+                child: SvgPicture.asset(Assets.icons.progressButton),
+                onTap: () {
+                  NavigationService.navigateToUntilReplacement(
+                    Routes.loginScreen,
+                  );
+                },
+              )
+              : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _buildTextWidget(
+                    onTap: () {
+                      NavigationService.navigateToUntilReplacement(
+                        Routes.loginScreen,
+                      );
+                    },
+                    text: 'Skip',
+                  ),
+
+                  _buildTextWidget(
+                    onTap: () {
+                      controller.nextPage(
+                        duration: Duration(milliseconds: 300),
+                        curve: Curves.easeInOut,
+                      );
+                    },
+                    text: 'Next',
+                  ),
+                ],
+              ),
+        ],
       ),
     );
   }
 }
- */
+
+Widget _buildTextWidget({
+  required String text,
+  required GestureTapCallback onTap,
+}) {
+  return InkWell(
+    onTap: onTap,
+    child: Text(text, style: TextFontStyle.textStyle14cFFFFFFManropeW600),
+  );
+}
