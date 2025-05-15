@@ -1,6 +1,7 @@
 import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
 import 'package:dawgonvegans/common_widgets/custom_button.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:dawgonvegans/helpers/toast.dart';
 import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:dawgonvegans/provider/edit_profile_provider.dart';
@@ -239,7 +240,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             UIHelper.verticalSpace(30.h),
             CustomButton(
               buttonName: 'Save Change',
-              onPressed: () {},
+              onPressed: () {
+                NavigationService.goBack;
+              },
               side: BorderSide.none,
             ),
           ],

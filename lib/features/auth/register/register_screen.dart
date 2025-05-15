@@ -1,4 +1,3 @@
-import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
 import 'package:dawgonvegans/common_widgets/custom_text_form_field.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/constants/validator.dart';

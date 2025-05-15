@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
+import '../../../common_widgets/custom_cached_network_image.dart';
 import '../../../constants/text_font_style.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
+import '../../../provider/edit_profile_provider.dart';
 
 class ProfileCardWidget extends StatelessWidget {
   final String profilePhoto;
@@ -29,14 +32,30 @@ class ProfileCardWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           // Profile Photo
-          Expanded(
-            flex: 1,
-            child: Image.asset(
-              profilePhoto,
-              fit: BoxFit.cover,
-              width: 60.w,
-              height: 60.h,
-            ),
+          Consumer<EditProfileProvider>(
+            builder: (context, provider, child) {
+              return Expanded(
+                flex: 1,
+                child:
+                    provider.selectedImage != null
+                        ? ClipOval(
+                          child: Image.file(
+                            provider.selectedImage!,
+                            fit: BoxFit.cover,
+                            width: 60.w,
+                            height: 60.h,
+                          ),
+                        )
+                        : ClipOval(
+                          child: CustomCachedNetworkImage(
+                            imageUrl: profilePhoto,
+                            fit: BoxFit.cover,
+                            width: 60.w,
+                            height: 60.h,
+                          ),
+                        ),
+              );
+            },
           ),
 
           // Name || EMail

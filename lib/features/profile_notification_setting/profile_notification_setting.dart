@@ -18,11 +18,9 @@ class ProfileNotificationSetting extends StatefulWidget {
 
 class _ProfileNotificationSettingState
     extends State<ProfileNotificationSetting> {
-
   final _controller = ValueNotifier<bool>(false);
   @override
   Widget build(BuildContext context) {
-
     log(_controller.toString());
     return Scaffold(
       appBar: CustomAppBar(text: 'Notification'),
@@ -53,7 +51,7 @@ class _ProfileNotificationSettingState
               activeColor: AppColors.cFE8204,
               inactiveColor: Colors.grey,
               borderRadius: BorderRadius.all(Radius.circular(15.r)),
-              width: 55.w,
+              width: 50.w,
               height: 30.h,
               enabled: true,
               disabledOpacity: 0.5,

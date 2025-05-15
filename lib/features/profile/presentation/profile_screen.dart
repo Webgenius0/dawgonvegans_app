@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/features/profile/widgets/log_out_alert.dart';
 import 'package:dawgonvegans/helpers/navigation_service.dart';
@@ -7,11 +5,13 @@ import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
 import '../../../common_widgets/custom_appbar.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
 import '../../../helpers/all_routes.dart';
+import '../../../provider/edit_profile_provider.dart';
 import '../widgets/profile_card_widget.dart';
 import '../widgets/profile_tile_widget.dart';
 
@@ -25,6 +25,8 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
+
+    final provider = Provider.of<EditProfileProvider>(context);
     return Scaffold(
       appBar: CustomAppBar(text: 'Profile', leading: SizedBox.shrink()),
 
@@ -35,13 +37,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // ProfileCardWidget for Profile Photo
-            ProfileCardWidget(
-              email: 'hello@designpicko.com',
-              name: ' Design Picko',
-              profilePhoto: Assets.images.profileImg.path,
-              onTap: () {
-                NavigationService.navigateTo(Routes.editProfileScreen);
-              },
+            Consumer<EditProfileProvider>(
+              
+              builder: (context, provider, child) {
+                return ProfileCardWidget(
+                  email: 'hello@designpicko.com',
+                  name: ' Design Picko',
+                  profilePhoto:Assets.images.profileImg.path,
+                
+
+
+                  
+                  
+               
+                  onTap: () {
+                    NavigationService.navigateTo(Routes.editProfileScreen);
+                  },
+                );
+              }
             ),
 
             UIHelper.verticalSpace(30.h),
@@ -137,11 +150,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 NavigationService.navigateTo(Routes.profileNotificationSetting);
               },
             ),
-            ProfileTileWidget(
+            /* ProfileTileWidget(
               icon: Assets.icons.eventBarIcon,
               titleName: 'Event',
               onTap: () {},
-            ),
+            ), */
             ProfileTileWidget(
               icon: Assets.icons.profileFavorite,
               titleName: 'Favorite',
