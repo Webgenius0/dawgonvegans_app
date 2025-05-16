@@ -6,6 +6,7 @@ import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../common_widgets/custom_alert_dialog.dart';
 import '../../gen/colors.gen.dart';
 import '../../helpers/all_routes.dart';
@@ -62,8 +63,8 @@ class PaymentMethodScreen extends StatelessWidget {
                   title: 'Welcome to SuperClub!',
                   subTitle: 'You have successfully subscribed to SuperClub!',
                   onPressed: () {
-                    NavigationService.navigateToReplacement(
-                      Routes.navigationScreen,
+                    NavigationService.navigateToWithArgs(
+                      Routes.navigationScreen, {'index' : 1}
                     );
                   },
                   buttonText: 'Ok',

@@ -33,7 +33,10 @@ class _MembershipScreenState extends State<MembershipScreen> {
             ),
             InkWell(
               onTap: () {
-                NavigationService.navigateTo(Routes.navigationScreen);
+                NavigationService.navigateToWithArgs(Routes.navigationScreen, {'index' : 1});
+
+
+
               },
               child: Text(
                 'Skip',

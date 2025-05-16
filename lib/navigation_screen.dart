@@ -12,20 +12,27 @@ import 'features/home_feed/presentation/home_feed_screen.dart';
 import 'gen/colors.gen.dart';
 
 class NavigationScreen extends StatefulWidget {
-  const NavigationScreen({super.key});
+  final int initialIndex;
+  const NavigationScreen({super.key, required this.initialIndex});
 
   @override
   State<NavigationScreen> createState() => _NavigationScreenState();
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
+  late int _selectedIndex;
   final List<Widget> _widgetList = [
     HomeFeedScreen(),
     MenuBarScreen(),
     EventScreen(),
     ProfileScreen(),
   ];
-  int _selectedIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.initialIndex;
+  }
 
   @override
   Widget build(BuildContext context) {

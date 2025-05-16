@@ -1,12 +1,12 @@
-import 'package:dawgonvegans/common_widgets/custom_appbar.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/helpers/all_routes.dart';
 import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
+import '../../../common_widgets/custom_appbar.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../gen/colors.gen.dart';
 import '../widgets/feed_card_widget.dart';
@@ -53,11 +53,19 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
             NavigationService.navigateTo(Routes.editProfileScreen);
           },
           child: Container(
+            width: 55.w,
+            height: 55.h,
+            margin: EdgeInsets.only(left: 20.w),
             decoration: BoxDecoration(
               color: AppColors.cFFFFFF,
               shape: BoxShape.circle,
             ),
-            child: Image.asset(Assets.images.avatar.path),
+            child: Image.asset(
+              Assets.images.avatar.path,
+              fit: BoxFit.cover,
+              width: 50.w,
+              height: 50.h,
+            ),
           ),
         ),
         actions: [
@@ -89,7 +97,6 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
           ),
         ],
       ),
-
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -124,7 +131,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
                 final isFavorite = isFavoriteList.contains(index);
                 final isLike = isLikeList.contains(index);
                 return InkWell(
-                  onTap: (){
+                  onTap: () {
                     NavigationService.navigateTo(Routes.productDetailsScreen);
                   },
                   child: FoodCardWidget(

@@ -21,6 +21,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/apple_icon.svg
   String get appleIcon => 'assets/icons/apple_icon.svg';
 
+  /// File path: assets/icons/arrow_cricle.svg
+  String get arrowCricle => 'assets/icons/arrow_cricle.svg';
+
   /// File path: assets/icons/arrow_down.svg
   String get arrowDown => 'assets/icons/arrow_down.svg';
 
@@ -165,6 +168,7 @@ class $AssetsIconsGen {
     aboutUs,
     addIcon,
     appleIcon,
+    arrowCricle,
     arrowDown,
     arrowRight,
     back,

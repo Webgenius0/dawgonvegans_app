@@ -30,12 +30,13 @@ final class Routes {
   static const String registerScreen = '/registerScreen';
   static const String forgetPasswordScreen = '/forgetPasswordScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
-  static const String membershipScreen = '/membershipScreen'; 
+  static const String membershipScreen = '/membershipScreen';
   static const String paymentMethodScreen = '/paymentMethodScreen';
   static const String navigationScreen = '/navigationScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String editProfileScreen = '/editProfileScreen';
-  static const String profileNotificationSetting = '/profileNotificationSetting';
+  static const String profileNotificationSetting =
+      '/profileNotificationSetting';
   static const String helpCenterScreen = '/helpCenterScreen';
   static const String aboutUsScreen = '/aboutUsScreen';
   static const String privacyPolicyScreen = '/privacyPolicyScreen';
@@ -92,12 +93,16 @@ final class RouteGenerator {
             )
             : CupertinoPageRoute(builder: (context) => PaymentMethodScreen());
       case Routes.navigationScreen:
+        final args = settings.arguments as Map<String, dynamic>;
         return Platform.isAndroid
             ? _FadedTransitionRoute(
-              widget: NavigationScreen(),
+              widget: NavigationScreen(initialIndex: args['index']),
               settings: settings,
             )
-            : CupertinoPageRoute(builder: (context) => NavigationScreen());
+            : CupertinoPageRoute(
+              builder:
+                  (context) => NavigationScreen(initialIndex: args['index']),
+            );
       case Routes.notificationScreen:
         return Platform.isAndroid
             ? _FadedTransitionRoute(
@@ -118,7 +123,9 @@ final class RouteGenerator {
               widget: ProfileNotificationSetting(),
               settings: settings,
             )
-            : CupertinoPageRoute(builder: (context) => ProfileNotificationSetting());
+            : CupertinoPageRoute(
+              builder: (context) => ProfileNotificationSetting(),
+            );
       case Routes.helpCenterScreen:
         return Platform.isAndroid
             ? _FadedTransitionRoute(
@@ -128,10 +135,7 @@ final class RouteGenerator {
             : CupertinoPageRoute(builder: (context) => HelpCenterScreen());
       case Routes.aboutUsScreen:
         return Platform.isAndroid
-            ? _FadedTransitionRoute(
-              widget: AboutUsScreen(),
-              settings: settings,
-            )
+            ? _FadedTransitionRoute(widget: AboutUsScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => AboutUsScreen());
       case Routes.privacyPolicyScreen:
         return Platform.isAndroid
@@ -163,10 +167,7 @@ final class RouteGenerator {
             : CupertinoPageRoute(builder: (context) => FavoriteScreen());
       case Routes.otpScreen:
         return Platform.isAndroid
-            ? _FadedTransitionRoute(
-              widget: OtpScreen(),
-              settings: settings,
-            )
+            ? _FadedTransitionRoute(widget: OtpScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => OtpScreen());
 
       default:

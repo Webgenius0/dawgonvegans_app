@@ -1,4 +1,5 @@
 import 'package:dawgonvegans/gen/colors.gen.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:dawgonvegans/helpers/ui_helpers.dart';
 import 'package:dawgonvegans/provider/product_details_provider.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
+import '../../../common_widgets/custom_alert_dialog.dart';
 import '../../../common_widgets/custom_button.dart';
 import '../../../constants/text_font_style.dart';
 import '../../../gen/assets.gen.dart';
@@ -190,7 +192,19 @@ class ProductDetailsWidget extends StatelessWidget {
 
           CustomButton(
             buttonName: 'Order Request',
-            onPressed: () {},
+            onPressed: () {
+              showCustomDialog(
+                title: 'Thank You',
+                subTitle: 'Your request has been send',
+                subTitleTextStyle: TextFontStyle.textStyle16c00020AManropeW400
+                    .copyWith(color: AppColors.c00020A.withValues(alpha: 0.99)),
+                buttonText: 'ok',
+                context: context,
+                onPressed: () {
+                  NavigationService.goBack;
+                },
+              );
+            },
             side: BorderSide.none,
           ),
 

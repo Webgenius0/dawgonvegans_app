@@ -1,8 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dawgonvegans/features/product_details/widgets/product_details_widget.dart';
 import 'package:dawgonvegans/gen/colors.gen.dart';
+import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../gen/assets.gen.dart';
@@ -31,7 +33,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       backgroundColor: Colors.red,
       body: Stack(
         children: [
-        
           // Carousel
           CarouselSlider.builder(
             itemCount: _imageList.length,
@@ -56,7 +57,16 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ),
           ),
 
-          // Indicator
+          // Back Icon
+          Positioned(
+            left: 20.w,
+            child: SafeArea(
+              child: InkWell(
+                onTap: () => NavigationService.goBack,
+                child: SvgPicture.asset(Assets.icons.arrowCricle),
+              ),
+            ),
+          ),
 
           // Overlapping content
           Padding(
