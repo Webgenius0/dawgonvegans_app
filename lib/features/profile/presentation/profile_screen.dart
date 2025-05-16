@@ -149,7 +149,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ProfileTileWidget(
               icon: Assets.icons.profileFavorite,
               titleName: 'Favorite',
-              onTap: () {},
+              onTap: () {
+  NavigationService.navigateTo(Routes.favoriteScreen);
+                
+              },
             ),
 
             Row(

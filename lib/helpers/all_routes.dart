@@ -11,6 +11,7 @@ import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
 import '../features/community_chat/presentation/community_chat_screen.dart';
 import '../features/edit_profile/edit_profile_screen.dart';
+import '../features/favorite/presentation/favorite_screen.dart';
 import '../features/help_center/presentation/help_center_screen.dart';
 import '../features/payment_method/payment_method_screen.dart';
 import '../features/privacy_policy/privacy_policy_screen.dart';
@@ -39,6 +40,7 @@ final class Routes {
   static const String privacyPolicyScreen = '/privacyPolicyScreen';
   static const String communityChatScreen = '/communityChatScreen';
   static const String productDetailsScreen = '/productDetailsScreen';
+  static const String favoriteScreen = '/favoriteScreen';
 }
 
 final class RouteGenerator {
@@ -150,6 +152,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => ProductDetailsScreen());
+      case Routes.favoriteScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: FavoriteScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => FavoriteScreen());
 
       default:
         return null;
