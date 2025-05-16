@@ -2,6 +2,7 @@ import 'package:provider/provider.dart';
 
 import '../provider/edit_profile_provider.dart';
 import '../provider/login_provider.dart';
+import '../provider/otp_provider.dart';
 import '../provider/product_details_provider.dart';
 import '../provider/register_provider.dart';
 import '../provider/reset_password_provider.dart';
@@ -21,4 +22,5 @@ var providers = [
   ChangeNotifierProvider<ProductDetailsProvider>(
     create: ((context) => ProductDetailsProvider()),
   ),
+  ChangeNotifierProvider<OtpProvider>(create: ((context) => OtpProvider())),
 ];

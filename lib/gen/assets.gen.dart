@@ -111,6 +111,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/notification.svg
   String get notification => 'assets/icons/notification.svg';
 
+  /// File path: assets/icons/otp_clock_icon.svg
+  String get otpClockIcon => 'assets/icons/otp_clock_icon.svg';
+
   /// File path: assets/icons/payment_icon.svg
   String get paymentIcon => 'assets/icons/payment_icon.svg';
 
@@ -192,6 +195,7 @@ class $AssetsIconsGen {
     minusIcon,
     nextButton,
     notification,
+    otpClockIcon,
     paymentIcon,
     privacyPolicy,
     profileArrowDown,

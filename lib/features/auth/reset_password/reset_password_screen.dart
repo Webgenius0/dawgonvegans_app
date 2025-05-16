@@ -1,6 +1,7 @@
 import 'package:dawgonvegans/common_widgets/custom_text_form_field.dart';
 import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:dawgonvegans/constants/validator.dart';
+import 'package:dawgonvegans/helpers/all_routes.dart';
 import 'package:dawgonvegans/helpers/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -169,7 +170,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                                     side: BorderSide.none,
                                     buttonName: 'Continue',
                                     onPressed: () {
-                                      NavigationService.goBack;
+                                      NavigationService.navigateToUntilReplacement(Routes.navigationScreen);
                                     },
                                   ),
                                 ],

@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../features/about_us/about_us_screen.dart';
 import '../features/auth/forget_password/forget_screen.dart';
+import '../features/auth/otp/presentaion/otp_screen.dart';
 import '../features/auth/register/register_screen.dart';
 import '../features/auth/reset_password/reset_password_screen.dart';
 import '../features/community_chat/presentation/community_chat_screen.dart';
@@ -41,6 +42,7 @@ final class Routes {
   static const String communityChatScreen = '/communityChatScreen';
   static const String productDetailsScreen = '/productDetailsScreen';
   static const String favoriteScreen = '/favoriteScreen';
+  static const String otpScreen = '/otpScreen';
 }
 
 final class RouteGenerator {
@@ -159,6 +161,13 @@ final class RouteGenerator {
               settings: settings,
             )
             : CupertinoPageRoute(builder: (context) => FavoriteScreen());
+      case Routes.otpScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+              widget: OtpScreen(),
+              settings: settings,
+            )
+            : CupertinoPageRoute(builder: (context) => OtpScreen());
 
       default:
         return null;

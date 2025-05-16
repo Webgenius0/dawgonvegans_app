@@ -61,7 +61,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 onPressed: ()  {
                  // if (_formKey.currentState!.validate()) {}
 
-                 NavigationService.navigateTo(Routes.resetPasswordScreen);
+                 NavigationService.navigateTo(Routes.otpScreen);
 
                  /*  await showModalBottomSheet(
                     context: context,
