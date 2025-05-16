@@ -127,7 +127,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
 
                       await showModalBottomSheet(
                         context: context,
-                        //    isDismissible: false,
+                           isDismissible: false,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(25.r),
@@ -170,7 +170,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                                     side: BorderSide.none,
                                     buttonName: 'Continue',
                                     onPressed: () {
-                                      NavigationService.navigateToUntilReplacement(Routes.navigationScreen);
+                                      NavigationService.navigateToWithArgs(Routes.navigationScreen, {'index' : 0});
                                     },
                                   ),
                                 ],

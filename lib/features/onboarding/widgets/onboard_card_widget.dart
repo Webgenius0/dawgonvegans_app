@@ -32,7 +32,7 @@ class OnboardCardWidget extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       decoration: ShapeDecoration(
-        color: Color(0xFF784F2E),
+        color: Color(0xFF2E2E2E),
         shape: RoundedRectangleBorder(
           side: BorderSide(width: 1.w, color: Colors.white),
           borderRadius: BorderRadius.circular(24.r),
