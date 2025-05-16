@@ -124,8 +124,6 @@ class TextFontStyle {
     fontSize: 12.sp,
     color: AppColors.c00020A,
     fontWeight: FontWeight.w400,
-
- 
   );
   static final textStyle24c36C0DEManropeW600 = TextStyle(
     fontFamily: 'manrope',
@@ -466,8 +464,6 @@ class TextFontStyle {
     fontSize: 12.sp,
     color: AppColors.cFE8204,
     fontWeight: FontWeight.w400,
-
-  
   );
   static final textStyle16c202531ManropeW500 = TextStyle(
     fontFamily: 'manrope',

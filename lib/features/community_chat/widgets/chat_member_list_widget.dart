@@ -1,7 +1,7 @@
-import 'package:dawgonvegans/constants/text_font_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../constants/text_font_style.dart';
 import '../../../gen/colors.gen.dart';
 
 class ChatMemberListWidget extends StatelessWidget {
@@ -28,20 +28,37 @@ class ChatMemberListWidget extends StatelessWidget {
       child: Row(
         spacing: 10.w,
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Profile Image
           CircleAvatar(radius: 20.r, child: Image.asset(profileImage)),
 
           Expanded(
-            child: Row(
-              children: [ 
-                Expanded(flex: 3, child: Text(name, style: TextFontStyle.textStyle16c202531ManropeW600,)),
-                Expanded(flex: 1, child: Text(time, style: TextFontStyle.textStyle14c00020AManropeW400,)),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  name,
+                  style: TextFontStyle.textStyle16c202531ManropeW600,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+
+                Text(
+                  lastMessage,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextFontStyle.textStyle14c00020AManropeW400.copyWith(
+                    color: AppColors.c00020A.withValues(alpha: 0.99),
+                  ),
+                ),
               ],
             ),
           ),
 
-          //
+          Spacer(),
+          Text(time, style: TextFontStyle.textStyle12c00020AManropeW400),
         ],
       ),
     );

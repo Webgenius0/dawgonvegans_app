@@ -136,6 +136,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/progress_button.svg
   String get progressButton => 'assets/icons/progress_button.svg';
 
+  /// File path: assets/icons/send_icon.svg
+  String get sendIcon => 'assets/icons/send_icon.svg';
+
   /// File path: assets/icons/square_logo.svg
   String get squareLogo => 'assets/icons/square_logo.svg';
 
@@ -197,6 +200,7 @@ class $AssetsIconsGen {
     profileMembershipIcon,
     profileNotification,
     progressButton,
+    sendIcon,
     squareLogo,
     star,
     superClub,
